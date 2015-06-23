@@ -10,9 +10,10 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
-gem 'materialize-sass'
+gem 'materialize-sass', git: 'git://github.com/mkhairi/materialize-sass.git'
 
 group :development, :test do
+  gem 'scss-lint'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 

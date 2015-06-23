@@ -1,3 +1,10 @@
+GIT
+  remote: git://github.com/mkhairi/materialize-sass.git
+  revision: 136f27fc24217d12c0b8c1f41835acb3e7934dba
+  specs:
+    materialize-sass (0.97.0)
+      sass (~> 3.3)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,8 +75,6 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
-    materialize-sass (0.96.2)
-      sass (~> 3.3)
     mime-types (2.6.1)
     mini_portile (0.6.2)
     minitest (5.7.0)
@@ -111,6 +116,7 @@ GEM
       activesupport (= 4.2.1)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
+    rainbow (2.0.0)
     rake (10.4.2)
     rdoc (4.2.0)
     sass (3.4.14)
@@ -120,6 +126,9 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (~> 1.1)
+    scss-lint (0.38.0)
+      rainbow (~> 2.0)
+      sass (~> 3.4.1)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -164,12 +173,13 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   jbuilder (~> 2.0)
   jquery-rails
-  materialize-sass
+  materialize-sass!
   pg
   puma
   rails (= 4.2.1)
   rails_12factor
   sass-rails (~> 5.0)
+  scss-lint
   sdoc (~> 0.4.0)
   slim-rails
   spring
