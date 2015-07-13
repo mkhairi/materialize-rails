@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'components/index'
+
   resources :posts
   get 'welcome/index'
 
