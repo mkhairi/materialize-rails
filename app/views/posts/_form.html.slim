@@ -6,13 +6,21 @@
         - @post.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :body
-    = f.text_area :body
-  .field
-    = f.label :published
-    = f.check_box :published
-  .actions = f.submit
+  .row
+    .col.s12
+      .row
+        .input-field.col.s10
+          i.material-icons.prefix business
+          = f.text_field :title, placeholder: "Please use appropriate punctuation"
+          = f.label :title
+      .row
+        .input-field.col.s10
+          i.material-icons.prefix language
+          = f.text_field :body, placeholder: "ex. 123 Fake St., Boston, USA"
+          = f.label :body
+      .row
+        .input-field.col.s3
+          = button_tag( :class => "waves-effect waves-light btn") do
+            | Create
+            i.material-icons send
+          	
