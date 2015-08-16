@@ -1,5 +1,20 @@
-h1 Components#index
-p Find me in app/views/components/index.html.slim
+.row
+  .col.s12.m4
+    .center.promo
+      i.material-icons flash_on
+      p.promo-caption Speeds up development
+      p.light.center We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.
+  .col.s12.m4
+    .center.promo
+      i.material-icons group
+      p.promo-caption User Experience Focused
+      p.light.center By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.
+  .col.s12.m4
+    .center.promo
+      i.material-icons settings
+      p.promo-caption Easy to work with
+      p.light.center We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.
+
 
 /! Dropdown Trigger
 a.dropdown-button.btn data-activates="dropdown1" href="#"  Drop Me!
@@ -13,3 +28,47 @@ ul#dropdown1.dropdown-content
   li
     a href="#!"  three
 
+
+/! Modal Trigger
+a.waves-effect.waves-light.btn.modal-trigger href="#modal1"  Modal
+/! Modal Structure
+#modal1.modal
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
+
+
+/! Modal Trigger
+a.modal-trigger.waves-effect.waves-light.btn href="#modal2"  Modal fixed footer
+/! Modal Structure
+#modal2.modal.modal-fixed-footer
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
+
+
+a.waves-effect.waves-light.btn.modal-trigger href="#modal3"  Modal Bottom
+/! Modal Structure
+#modal3.modal.bottom-sheet
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
+	
+.row.center
+  h3.light.header Materialize Showcase
+  p.col.s8.offset-s2.caption Checkout what people are creating with Materialize. Get inspired by these beautiful sites and you can even submit your own website to be showcased here.
+  a.btn-large.waves-effect.waves-light href="http://materializecss.com/showcase.html"  Explore our Showcase
+
+
+br
+br
+br
+br
+javascript:
+   $('.modal-trigger').leanModal();

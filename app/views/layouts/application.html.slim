@@ -10,15 +10,16 @@ html
     = csrf_meta_tags
   body
     - color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
-    nav class="#{color} lighten-1"
-     .nav-wrapper.container
-       a#logo-container.brand-logo href="/"  Materialize Rails
-       ul#nav-mobile.right
-         li: a href="/posts" Posts
-         li: a href="/components"  Components
-         li: a href="/" Home
-       a.button-collapse data-activates="nav-mobile" href="#" 
-         i.mdi-navigation-menu
+	.navbar-fixed	
+		nav class="#{color} lighten-1"
+		 .nav-wrapper.container
+		   a#logo-container.brand-logo href="/"  Materialize Rails
+		   ul#nav-mobile.right
+			 li: a href="/posts" Posts
+			 li: a href="/components"  Components
+			 li: a href="/" Home
+		   a.button-collapse data-activates="nav-mobile" href="#" 
+			 i.mdi-navigation-menu
 
     .container
       = yield
