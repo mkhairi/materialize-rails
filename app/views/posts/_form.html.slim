@@ -19,6 +19,11 @@
           = f.text_field :body, placeholder: "ex. 123 Fake St., Boston, USA"
           = f.label :body
       .row
+        .input-field.col.s10
+          i.material-icons.prefix published
+          = f.check_box :published, class:"checkbox"
+          = f.label :published
+      .row
         .input-field.col.s3
           = button_tag( :class => "waves-effect waves-light btn") do
             | Create

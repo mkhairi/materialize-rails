@@ -66,9 +66,56 @@ a.waves-effect.waves-light.btn.modal-trigger href="#modal3"  Modal Bottom
   a.btn-large.waves-effect.waves-light href="http://materializecss.com/showcase.html"  Explore our Showcase
 
 
+hr
+form action="#" 
+  p
+    input#test5 type="checkbox" /
+    label for="test5"  Red
+  p
+    input#test6 checked="checked" type="checkbox" /
+    label for="test6"  Yellow
+  p
+    input#filled-in-box.filled-in checked="checked" type="checkbox" /
+    label for="filled-in-box"  Filled in
+  p
+    input#test7 checked="checked" disabled="disabled" type="checkbox" /
+    label for="test7"  Green
+  p
+    input#test8 disabled="disabled" type="checkbox" /
+    label for="test8"  Brown
+
+hr
+
+form action="#" 
+  p
+    input#test1 name="group1" type="radio" /
+    label for="test1"  Red
+  p
+    input#test2 name="group1" type="radio" /
+    label for="test2"  Yellow
+  p
+    input#test3.with-gap name="group1" type="radio" /
+    label for="test3"  Green
+  p
+    input#test4 disabled="disabled" name="group1" type="radio" /
+    label for="test4"  Brown
 br
-br
-br
+hr
+/! Switch
+.switch
+  label
+    | Off
+    input type="checkbox" /
+    span.lever
+    | On
+/! Disabled Switch
+.switch
+  label
+    | Off
+    input disabled="" type="checkbox" /
+    span.lever
+    | On
+
 br
 javascript:
    $('.modal-trigger').leanModal();
