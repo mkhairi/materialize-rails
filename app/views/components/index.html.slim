@@ -119,3 +119,25 @@ hr
 br
 javascript:
    $('.modal-trigger').leanModal();
+
+#range-slider
+
+javascript:
+   var slider = document.getElementById('range-slider');
+   noUiSlider.create(slider, {
+   start: [20, 80],
+   connect: true,
+   step: 1,
+   range: {
+     'min': 0,
+     'max': 100
+   },
+   format: wNumb({
+     decimals: 0
+   })
+   });
+      
+
+br
+br
+br
