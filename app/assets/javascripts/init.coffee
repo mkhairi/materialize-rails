@@ -1,3 +1,4 @@
-$(document).on 'ready page:change', ->
-	Waves.displayEffect()
-	$('.dropdown-button').dropdown()
+$(document).on 'page:change', ->
+  Materialize.updateTextFields()
+  Waves.displayEffect()
+  $('.dropdown-button').dropdown()
