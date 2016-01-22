@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/mkhairi/materialize-sass.git
-  revision: fc84b0c0b715fa32478448f9f06a3df1bff6e7cf
+  revision: eae817ed1c780331af638ecb6b04ecb3f35075b2
   specs:
     materialize-sass (0.97.5)
       sass (~> 3.3)
@@ -76,9 +76,9 @@ GEM
       mime-types (>= 1.16, < 3)
     mime-types (2.99)
     mini_portile2 (2.0.0)
-    minitest (5.8.3)
+    minitest (5.8.4)
     multi_json (1.11.2)
-    nokogiri (1.6.7.1)
+    nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
     puma (2.15.3)
