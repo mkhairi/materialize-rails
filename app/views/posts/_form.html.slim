@@ -31,6 +31,11 @@
           = f.check_box :published, class:"checkbox"
           = f.label :published
       .row
+        .input-field.col.s10
+          label for="birthdate" class="" Birthday
+          input type="date" class="datepicker"
+
+      .row
         .input-field.col.s3
           = f.button class: "waves-effect waves-light btn ", type: :submit do
             | Create
@@ -83,3 +88,11 @@
     option value="2"  Option 2
     option value="3"  Option 3
 
+
+
+javascript:
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+        
