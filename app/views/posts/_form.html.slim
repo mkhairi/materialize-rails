@@ -32,6 +32,12 @@
           = f.label :published
       .row
         .input-field.col.s10
+          i.material-icons.prefix calendar
+          = f.datetime_select :birthday, class:"checkbox"
+          = f.label :birthday
+
+      .row
+        .input-field.col.s10
           label for="birthdate" class="" Birthday
           input type="date" class="datepicker"
 
@@ -44,49 +50,50 @@
 
 
 .row
-  .input-field.col.s12
-    select
-      option disabled="" selected="" value=""  Choose your option
-      option value="1"  Option 1
-      option value="2"  Option 2
-      option value="3"  Option 3
-    label Materialize Select
-  .input-field.col.s12
-    select multiple="" 
-      option disabled="" selected="" value=""  Choose your option
-      option value="1"  Option 1
-      option value="2"  Option 2
-      option value="3"  Option 3
-    label Materialize Multiple Select
-  .input-field.col.s12
-    select multiple="" 
-      optgroup label=("team 1") 
+  .col.s12
+    .input-field.col.s12
+      select
+        option disabled="" selected="" value=""  Choose your option
         option value="1"  Option 1
         option value="2"  Option 2
-      optgroup label=("team 2") 
         option value="3"  Option 3
-        option value="4"  Option 4
-    label Optgroups
-  .input-field.col.s12.m6
-    select.icons
+      label Materialize Select
+    .input-field.col.s12
+      select multiple="" 
+        option disabled="" selected="" value=""  Choose your option
+        option value="1"  Option 1
+        option value="2"  Option 2
+        option value="3"  Option 3
+      label Materialize Multiple Select
+    .input-field.col.s12
+      select multiple="" 
+        optgroup label=("team 1") 
+          option value="1"  Option 1
+          option value="2"  Option 2
+        optgroup label=("team 2") 
+          option value="3"  Option 3
+          option value="4"  Option 4
+      label Optgroups
+    .input-field.col.s12.m6
+      select.icons
+        option disabled="" selected="" value=""  Choose your option
+        option.circle data-icon="images/sample-1.jpg" value=""  example 1
+        option.circle data-icon="images/office.jpg" value=""  example 2
+        option.circle data-icon="images/yuna.jpg" value=""  example 1
+      label Images in select
+    .input-field.col.s12.m6
+      select.icons
+        option disabled="" selected="" value=""  Choose your option
+        option.left.circle data-icon="images/sample-1.jpg" value=""  example 1
+        option.left.circle data-icon="images/office.jpg" value=""  example 2
+        option.left.circle data-icon="images/yuna.jpg" value=""  example 3
+      label Images in select
+    label Browser Select
+    select.browser-default
       option disabled="" selected="" value=""  Choose your option
-      option.circle data-icon="images/sample-1.jpg" value=""  example 1
-      option.circle data-icon="images/office.jpg" value=""  example 2
-      option.circle data-icon="images/yuna.jpg" value=""  example 1
-    label Images in select
-  .input-field.col.s12.m6
-    select.icons
-      option disabled="" selected="" value=""  Choose your option
-      option.left.circle data-icon="images/sample-1.jpg" value=""  example 1
-      option.left.circle data-icon="images/office.jpg" value=""  example 2
-      option.left.circle data-icon="images/yuna.jpg" value=""  example 3
-    label Images in select
-  label Browser Select
-  select.browser-default
-    option disabled="" selected="" value=""  Choose your option
-    option value="1"  Option 1
-    option value="2"  Option 2
-    option value="3"  Option 3
+      option value="1"  Option 1
+      option value="2"  Option 2
+      option value="3"  Option 3
 
 
 

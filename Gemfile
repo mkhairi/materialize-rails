@@ -11,7 +11,9 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'materialize-sass', git: 'git://github.com/mkhairi/materialize-sass.git'
+gem 'material_icons'
 #gem 'materialize-sass'
+gem 'devise'
 
 group :development, :test do
   gem 'scss-lint'
@@ -31,4 +33,4 @@ end
 
 gem 'puma'
 
-ruby "2.2.1"
+ruby "2.2.2"
