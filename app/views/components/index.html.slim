@@ -41,8 +41,13 @@ ul#dropdown1.dropdown-content
     a href="#!"  three
 
 
+button.btn data-target="modal1"  Modal 1
+button.btn data-target="modal2"  Modal 2
+button.btn data-target="modal3"  Modal 3
+
+
 /! Modal Trigger
-a.waves-effect.waves-light.btn.modal-trigger href="#modal1"  Modal
+a.waves-effect.waves-light.btn href="#modal1" data-turbolinks="false"  Modal
 /! Modal Structure
 #modal1.modal
   .modal-content
@@ -50,10 +55,8 @@ a.waves-effect.waves-light.btn.modal-trigger href="#modal1"  Modal
     p A bunch of text
   .modal-footer
     a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
-
-
 /! Modal Trigger
-a.modal-trigger.waves-effect.waves-light.btn href="#modal2"  Modal fixed footer
+a.modal-trigger.waves-effect.waves-light.btn href="#modal2" data-turbolinks="false"  Modal
 /! Modal Structure
 #modal2.modal.modal-fixed-footer
   .modal-content
@@ -61,9 +64,8 @@ a.modal-trigger.waves-effect.waves-light.btn href="#modal2"  Modal fixed footer
     p A bunch of text
   .modal-footer
     a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
-
-
-a.waves-effect.waves-light.btn.modal-trigger href="#modal3"  Modal Bottom
+/! Modal Trigger
+a.waves-effect.waves-light.btn href="#modal3" data-turbolinks="false"  Modal
 /! Modal Structure
 #modal3.modal.bottom-sheet
   .modal-content
@@ -129,8 +131,6 @@ hr
     | On
 
 br
-javascript:
-   $('.modal-trigger').leanModal();
 
 #range-slider
 
@@ -167,4 +167,52 @@ br
   .col.s6.offset-s3.grid-example
     span.flow-text 6-columns (offset-s3)
 
+.row
+  .col.s12
+    ul.tabs
+      li.tab.col.s3
+        a href="#test-tab-1"  Test 1
+      li.tab.col.s3
+        a.active href="#test-tab-2"  Test 2
+      li.tab.col.s3.disabled
+        a href="#test-tab-3"  Disabled Tab
+      li.tab.col.s3
+        a href="#test-tab-4"  Test 4
+
+    #test-tab-1.col.s12 Test 1
+    #test-tab-2.col.s12 Test 2
+    #test-tab-3.col.s12 Test 3
+    #test-tab-4.col.s12 Test 4
+
+  .col.s12
+
+    ul#tabs-swipe-demo.tabs
+      li.tab.col.s3
+        a href="#test-swipe-1"  Test 1
+      li.tab.col.s3
+        a.active href="#test-swipe-2"  Test 2
+      li.tab.col.s3
+        a href="#test-swipe-3"  Test 3
+
+    #test-swipe-1.col.s12.blue Test 1
+    #test-swipe-2.col.s12.red Test 2
+    #test-swipe-3.col.s12.green Test 3
+
+
+/! Element Showed
+a#menu.waves-effect.waves-light.btn.btn-floating
+  i.material-icons menu
+/! Tap Target Structure
+.tap-target data-activates="menu" 
+  .tap-target-content
+    h5 Title
+    p A bunch of text
+
+
+ 
+javascript:
+  $('.modal').modal();
+  $('ul.tabs').tabs();
+  $('.tapTarget').tapTarget('open');
+  $('.tapTarget').tapTarget('close');
 
