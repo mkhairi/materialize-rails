@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/mkhairi/materialize-sass.git
-  revision: cc5b871f22681fa0a0e261bef6f979948237f195
+  revision: ec16beab711721297f6b1bb34cce49067845c599
   specs:
-    materialize-sass (0.98.1)
+    materialize-sass (0.98.2)
       sass (~> 3.3)
 
 GEM
