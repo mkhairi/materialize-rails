@@ -1,0 +1,34 @@
+h3 Modal
+
+button.btn data-target="modal1"  Modal 1
+button.btn data-target="modal2"  Modal 2
+button.btn data-target="modal3"  Modal 3
+
+
+/! Modal Trigger
+a.waves-effect.waves-light.btn href="#modal1" data-turbolinks="false"  Modal
+/! Modal Structure
+#modal1.modal
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
+/! Modal Trigger
+a.modal-trigger.waves-effect.waves-light.btn href="#modal2" data-turbolinks="false"  Modal
+/! Modal Structure
+#modal2.modal.modal-fixed-footer
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree
+/! Modal Trigger
+a.waves-effect.waves-light.btn href="#modal3" data-turbolinks="false"  Modal
+/! Modal Structure
+#modal3.modal.bottom-sheet
+  .modal-content
+    h4 Modal Header
+    p A bunch of text
+  .modal-footer
+    a.modal-action.modal-close.waves-effect.waves-green.btn-flat href="#!"  Agree

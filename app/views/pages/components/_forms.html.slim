@@ -1,0 +1,288 @@
+h3 Forms
+
+h5 Input fields
+.row
+  form.col.s12
+    .row
+      .input-field.col.s6
+        input#first_name.validate placeholder="Placeholder" type="text" /
+        label for="first_name"  First Name
+      .input-field.col.s6
+        input#last_name.validate type="text" /
+        label for="last_name"  Last Name
+    .row
+      .input-field.col.s12
+        input#disabled.validate disabled="" type="text" value=("I am not editable") /
+        label for="disabled"  Disabled
+    .row
+      .input-field.col.s12
+        input#password.validate type="password" /
+        label for="password"  Password
+    .row
+      .input-field.col.s12
+        input#email.validate type="email" /
+        label for="email"  Email
+    .row
+      .col.s12
+        | This is an inline input field:
+        .input-field.inline
+          input#email.validate type="email" /
+          label data-error="wrong" data-success="right" for="email"  Email
+
+
+h5 Prefilling Text Inputs
+.row
+  .input-field.col.s6
+    input#first_name2.validate type="text" value="Alvin" /
+    label.active for="first_name2"  First Name
+
+
+h5 Icon Prefixes
+.row
+  form.col.s12
+    .row
+      .input-field.col.s6
+        i.material-icons.prefix account_circle
+        input#icon_prefix.validate type="text" /
+        label for="icon_prefix"  First Name
+      .input-field.col.s6
+        i.material-icons.prefix phone
+        input#icon_telephone.validate type="tel" /
+        label for="icon_telephone"  Telephone
+
+
+h5 Custom Error or Success Messages
+.row
+  form.col.s12
+    .row
+      .input-field.col.s12
+        input#email.validate type="email" /
+        label data-error="wrong" data-success="right" for="email"  Email
+
+
+h5 Textarea
+.row
+  form.col.s12
+    .row
+      .input-field.col.s12
+        textarea#textarea1.materialize-textarea
+        label for="textarea1"  Textarea
+
+
+.row
+  form.col.s12
+    .row
+      .input-field.col.s6
+        i.material-icons.prefix mode_edit
+        textarea#icon_prefix2.materialize-textarea
+        label for="icon_prefix2"  First Name
+
+
+h5 Select
+
+.input-field.col.s12
+  select
+    option disabled="" selected="" value=""  Choose your option
+    option value="1"  Option 1
+    option value="2"  Option 2
+    option value="3"  Option 3
+  label Materialize Select
+.input-field.col.s12
+  select multiple="" 
+    option disabled="" selected="" value=""  Choose your option
+    option value="1"  Option 1
+    option value="2"  Option 2
+    option value="3"  Option 3
+  label Materialize Multiple Select
+.input-field.col.s12
+  select multiple="" 
+    optgroup label=("team 1") 
+      option value="1"  Option 1
+      option value="2"  Option 2
+    optgroup label=("team 2") 
+      option value="3"  Option 3
+      option value="4"  Option 4
+  label Optgroups
+.input-field.col.s12.m6
+  select.icons
+    option disabled="" selected="" value=""  Choose your option
+    option.circle data-icon="http://materializecss.com/images/sample-1.jpg" value=""  example 1
+    option.circle data-icon="http://materializecss.com/images/office.jpg" value=""  example 2
+    option.circle data-icon="http://materializecss.com/images/yuna.jpg" value=""  example 3
+  label Images in select
+.input-field.col.s12.m6
+  select.icons
+    option disabled="" selected="" value=""  Choose your option
+    option.left.circle data-icon="http://materializecss.com/images/sample-1.jpg" value=""  example 1
+    option.left.circle data-icon="http://materializecss.com/images/office.jpg" value=""  example 2
+    option.left.circle data-icon="http://materializecss.com/images/yuna.jpg" value=""  example 3
+  label Images in select
+label Browser Select
+select.browser-default
+  option disabled="" selected="" value=""  Choose your option
+  option value="1"  Option 1
+  option value="2"  Option 2
+  option value="3"  Option 3
+
+
+
+label Materialize Disabled
+select disabled="" 
+  option disabled="" selected="" value=""  Choose your option
+  option value="1"  Option 1
+  option value="2"  Option 2
+  option value="3"  Option 3
+label Browser Disabled
+select.browser-default disabled="" 
+  option disabled="" selected="" value=""  Choose your option
+  option value="1"  Option 1
+  option value="2"  Option 2
+  option value="3"  Option 3
+
+
+
+h5 Radio Buttons
+
+form action="#" 
+  p
+    input#test1 name="group1" type="radio" /
+    label for="test1"  Red
+  p
+    input#test2 name="group1" type="radio" /
+    label for="test2"  Yellow
+  p
+    input#test3.with-gap name="group1" type="radio" /
+    label for="test3"  Green
+  p
+    input#test4 disabled="disabled" name="group1" type="radio" /
+    label for="test4"  Brown
+
+  p
+    input#test5.with-gap checked="" name="group3" type="radio" /
+    label for="test5"  Red
+
+br
+h5 Checkbox
+form action="#" 
+  p
+    input#test5 type="checkbox" /
+    label for="test5"  Red
+  p
+    input#test6 checked="checked" type="checkbox" /
+    label for="test6"  Yellow
+  p
+    input#filled-in-box.filled-in checked="checked" type="checkbox" /
+    label for="filled-in-box"  Filled in
+  p
+    input#indeterminate-checkbox type="checkbox" /
+    label for="indeterminate-checkbox"  Indeterminate Style
+  p
+    input#test7 checked="checked" disabled="disabled" type="checkbox" /
+    label for="test7"  Green
+  p
+    input#test8 disabled="disabled" type="checkbox" /
+    label for="test8"  Brown
+
+
+h5 Switch
+/! Switch
+.switch
+  label
+    | Off
+    input type="checkbox" /
+    span.lever
+    | On
+/! Disabled Switch
+.switch
+  label
+    | Off
+    input disabled="" type="checkbox" /
+    span.lever
+    | On
+
+h5 Files
+form action="#" 
+  .file-field.input-field
+    .btn
+      span File
+      input multiple="" type="file" /
+    .file-path-wrapper
+      input.file-path.validate placeholder=("Upload one or more files") type="text" /
+
+br
+h5 no-Ui slider
+#range-slider
+
+javascript:
+   var slider = document.getElementById('range-slider');
+   noUiSlider.create(slider, {
+   start: [20, 80],
+   connect: true,
+   step: 1,
+   range: {
+     'min': 0,
+     'max': 100
+   },
+   format: wNumb({
+     decimals: 0
+   })
+   });
+
+br
+h5 HTML5 Slider
+form action="#" 
+  p.range-field
+    input#test5 max="100" min="0" type="range" /
+
+h5 Datepicker
+input type="date" class="datepicker"
+
+javascript:
+  $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
+        
+
+h5 Character Counter
+.row
+  form.col.s12
+    .row
+      .input-field.col.s6
+        input#input_text data-length="10" type="text" /
+        label for="input_text"  Input text
+    .row
+      .input-field.col.s12
+        textarea#textarea1.materialize-textarea data-length="120" 
+        label for="textarea1"  Textarea
+
+
+
+h5 Autocomplete
+.row
+  .col.s12
+    .row
+      .input-field.col.s12
+        i.material-icons.prefix textsms
+        input#autocomplete-input.autocomplete type="text" /
+        label for="autocomplete-input"  Autocomplete
+
+javascript:
+  $('input.autocomplete').autocomplete({
+    data: {
+      "Apple": null,
+      "Microsoft": null,
+      "Google": 'http://placehold.it/250x250'
+    },
+    limit: 20, // The max amount of results that can be shown at once. Default: Infinity.
+    onAutocomplete: function(val) {
+      // Callback function when value is autcompleted.
+    },
+    minLength: 1, // The minimum length of the input for the autocomplete to start. Default: 1.
+  });
+
+
+
+
+
+
