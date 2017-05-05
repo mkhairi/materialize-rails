@@ -1,6 +1,17 @@
 @import "materialize";
 @import "materialize/extras/nouislider";
 
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+     
+
 .icon-container .icon-preview span {
     text-align: left;
     display: block;
