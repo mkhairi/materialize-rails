@@ -4,9 +4,9 @@ html
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
     meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport" /
     title Materialize
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
-    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
   body
     - color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
