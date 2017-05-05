@@ -61,8 +61,5 @@ gem 'responders'
 gem 'materialize-sass'
 
 
-group :production do
-  gem 'rails_12factor'
-end
 
 ruby '2.4.1'
