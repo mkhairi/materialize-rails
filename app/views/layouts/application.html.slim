@@ -15,9 +15,12 @@ html
        .nav-wrapper.container
           a#logo-container.brand-logo href="/"  Materialize Rails
           ul#nav-mobile.right
-           li: a href="/" Home
-           li: a href="/posts" Posts
-           li: a href="/components"  Components
+            li: a href="/" Home
+            li
+              a href="/posts" 
+                span Posts
+                span.new.badge 4
+            li: a href="/components"  Components
           ul#nav-mobile.side-nav style=("transform: translateX(-100%);") 
             li
               a href="#"  Navbar Link

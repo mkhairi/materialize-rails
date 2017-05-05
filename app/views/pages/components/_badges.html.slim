@@ -1,0 +1,54 @@
+h3 Badges
+
+
+h5 Badges
+
+.collection
+  a.collection-item href="#!" 
+    span.badge> 1
+    | Alan
+  a.collection-item href="#!" 
+    span.new.badge> 4
+    | Alan
+  a.collection-item href="#!"  Alan
+  a.collection-item href="#!" 
+    span.badge> 14
+    | Alan
+
+br
+h5 Badges in Dropdown
+ul#dropdown2.dropdown-content
+  li
+    a href="#!" 
+      | one
+      span.badge 1
+  li
+    a href="#!" 
+      | two
+      span.new.badge 1
+  li
+    a href="#!"  three
+a.btn.dropdown-button data-activates="dropdown2" href="#!" 
+  | Dropdown
+  i.mdi-navigation-arrow-drop-down.right
+
+br
+br
+h5 Badges in Collapsibles
+ul.collapsible data-collapsible="accordion" 
+  li
+    .collapsible-header
+      span.new.badge 4
+      i.material-icons filter_drama
+      span First
+    .collapsible-body
+      p Lorem ipsum dolor sit amet.
+  li
+    .collapsible-header
+      span.badge 1
+      i.material-icons place
+      span Second
+    .collapsible-body
+      p Lorem ipsum dolor sit amet.
+
+
