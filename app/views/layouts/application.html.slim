@@ -9,8 +9,6 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
     - color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
-    style
-      .a{fill: #fff !important;}
 
   body
     header.navbar-fixed 
@@ -19,7 +17,7 @@ html
           a href="#" data-activates="slide-out" class="button-collapse show-on-large" data-turbolinks="false"
             i class="material-icons right" view_module
           a#logo-container.brand-logo href="/"  
-            img src="rails-logo.svg" width="120" height="68" style="fill: white !important;"
+            img src="/rails-logo.svg" width="120" height="68" style="fill: white !important;"
           ul#nav-mobile.right
             li: a href="/" Home
             li
