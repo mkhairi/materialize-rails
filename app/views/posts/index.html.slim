@@ -3,9 +3,9 @@ h3 Posts
 table.table
   thead
     tr
-      th Title
-      th Body
-      th Published
+      th width="40%"Title
+      th width="60%" Body
+      th width="40px" Published
       th width="40px"
       th width="40px"
       th width="40px"
@@ -19,7 +19,8 @@ table.table
         td = link_to 'Show', post
         td = link_to 'Edit', edit_post_path(post)
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
-
 br
 
-= link_to 'New Post', new_post_path
+.fixed-action-btn
+  a.btn-floating.btn-large.red href="#{new_post_path}"
+    i.large.material-icons add

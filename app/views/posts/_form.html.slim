@@ -10,13 +10,13 @@
     .col.s12
       .row
         .input-field.col.s10
-          i.material-icons.prefix business
+          i.material-icons.prefix title
           = f.text_field :title, placeholder: "Please use appropriate punctuation"
           = f.label :title
       .row
         .input-field.col.s10
-          i.material-icons.prefix language
-          = f.text_field :body, placeholder: "ex. 123 Fake St., Boston, USA"
+          i.material-icons.prefix descriptions
+          = f.text_area :body, placeholder: "some text here", class: "materialize-textarea", data: {length: "360"}
           = f.label :body
       .row
         .input-field.col.s10
