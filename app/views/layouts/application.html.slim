@@ -8,12 +8,18 @@ html
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
     = javascript_include_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
-  body
     - color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
+    style
+      .a{fill: #fff !important;}
+
+  body
     header.navbar-fixed 
       nav class="#{color} lighten-1"
        .nav-wrapper.container
-          a#logo-container.brand-logo href="/"  Materialize Rails
+          a href="#" data-activates="slide-out" class="button-collapse show-on-large" data-turbolinks="false"
+            i class="material-icons right" view_module
+          a#logo-container.brand-logo href="/"  
+            img src="rails-logo.svg" width="120" height="68" style="fill: white !important;"
           ul#nav-mobile.right
             li: a href="/" Home
             li
@@ -21,11 +27,34 @@ html
                 span Posts
                 span.new.badge 4
             li: a href="/components"  Components
-          ul#nav-mobile.side-nav style=("transform: translateX(-100%);") 
-            li
-              a href="#"  Navbar Link
-          a.button-collapse data-activates="nav-mobile" href="#" 
-            i.mdi-navigation-menu
+          
+    aside
+      ul#slide-out.side-nav
+        li
+          .userView
+            .background
+              img src="http://materializecss.com/images/office.jpg" /
+            a href="#!user" 
+              img.circle src="http://materializecss.com/images/yuna.jpg" /
+            a href="#!name" 
+              span.white-text.name Yuna
+            a href="#!email" 
+              span.white-text.email yunalis@gmail.com
+        li
+          a href="/posts" 
+            i.material-icons cloud
+            span Posts
+        li
+          a href="/components" 
+            i.material-icons settings
+            span Component
+        li
+          .divider
+        li
+          a.subheader Subheader
+        li
+          a.waves-effect href="https://github.com/mkhairi/materialize-sass"  GitHub
+
 
     main
       = yield(:jumbotron) if content_for?(:jumbotron)

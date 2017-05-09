@@ -6,5 +6,6 @@ $(document).on 'ready turbolinks:load', ->
   $('ul.tabs').tabs();
   $('.tapTarget').tapTarget('open');
   $('.tapTarget').tapTarget('close');
+  $(".button-collapse").sideNav();
 
 
