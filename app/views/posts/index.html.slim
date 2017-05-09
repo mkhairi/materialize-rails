@@ -21,6 +21,20 @@ table.table
         td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 br
 
+
+
+
 .fixed-action-btn
-  a.btn-floating.btn-large.red href="#{new_post_path}"
+  a#newpost.waves-effect.waves-light.btn.btn-floating.btn-large.cyan href="#{new_post_path}" 
     i.large.material-icons add
+
+/! Tap Target Structure
+.tap-target.cyan data-activates="newpost" 
+  .tap-target-content
+    h5 Start posting
+    p Tell me what not working
+
+
+
+javascript:
+  $('.tap-target').tapTarget('open');
