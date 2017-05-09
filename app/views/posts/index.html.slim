@@ -29,12 +29,12 @@ br
     i.large.material-icons add
 
 /! Tap Target Structure
-.tap-target.cyan data-activates="newpost" 
+.tap-target.newpost.cyan data-activates="newpost" 
   .tap-target-content
     h5 Start posting
     p Tell me what not working
 
 
-
-javascript:
-  $('.tap-target').tapTarget('open');
+- if current_post_hit <= 1
+  javascript:
+    $('.tap-target.newpost').tapTarget('open');

@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  helper_method :current_post_hit
+
   # GET /posts
   # GET /posts.json
   def index
@@ -61,6 +63,13 @@ class PostsController < ApplicationController
     end
   end
 
+  def current_post_hit
+    hit = cookies['post_hit'].to_i
+    hit += 1
+    cookies['post_hit'] = hit
+    hit
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_post
@@ -71,4 +80,6 @@ class PostsController < ApplicationController
     def post_params
       params.require(:post).permit(:title, :body, :published)
     end
+
+
 end
