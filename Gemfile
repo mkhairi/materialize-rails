@@ -61,7 +61,7 @@ gem 'slim-rails'
 gem 'decent_exposure'
 gem 'responders'
 gem 'materialize-sass'
-
+gem 'show_for'
 
 
 ruby '2.4.1'
