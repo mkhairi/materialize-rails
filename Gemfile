@@ -56,12 +56,13 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'high_voltage'
+gem 'devise'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'decent_exposure'
 gem 'responders'
 gem 'materialize-sass'
 gem 'show_for'
-
+gem 'jquery-datatables'
 
 ruby '2.4.1'

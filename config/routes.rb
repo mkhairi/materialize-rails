@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
     resources :posts
 
     get  "avatar(/:size/:text)", to: "avatar#index",    as: :avatar
