@@ -20,14 +20,14 @@ h5 Input fields
         label for="password"  Password
     .row
       .input-field.col.s12
-        input#email.validate type="email" /
-        label for="email"  Email
+        input#email1.validate type="email" /
+        label for="email1"  Email
     .row
       .col.s12
         | This is an inline input field:
         .input-field.inline
-          input#email.validate type="email" /
-          label data-error="wrong" data-success="right" for="email"  Email
+          input#email2.validate type="email" /
+          label data-error="wrong" data-success="right" for="email2"  Email
 
 
 h5 Prefilling Text Inputs
@@ -145,31 +145,31 @@ h5 Radio Buttons
 
 form action="#" 
   p
-    input#test1 name="group1" type="radio" /
-    label for="test1"  Red
+    input#test-input0 name="group1" type="radio" /
+    label for="test-input0"  Red
   p
-    input#test2 name="group1" type="radio" /
-    label for="test2"  Yellow
+    input#test-input1 name="group1" type="radio" /
+    label for="test-input1"  Yellow
   p
-    input#test3.with-gap name="group1" type="radio" /
-    label for="test3"  Green
+    input#test-input2.with-gap name="group1" type="radio" /
+    label for="test-input2"  Green
   p
-    input#test4 disabled="disabled" name="group1" type="radio" /
-    label for="test4"  Brown
+    input#test-input3 disabled="disabled" name="group1" type="radio" /
+    label for="test-input3"  Brown
 
   p
-    input#test5.with-gap checked="" name="group3" type="radio" /
-    label for="test5"  Red
+    input#test-input4.with-gap checked="" name="group3" type="radio" /
+    label for="test-input4"  Red
 
 br
 h5 Checkbox
 form action="#" 
   p
-    input#test5 type="checkbox" /
-    label for="test5"  Red
+    input#test-input5 type="checkbox" /
+    label for="test-input5"  Red
   p
-    input#test6 checked="checked" type="checkbox" /
-    label for="test6"  Yellow
+    input#test-input6 checked="checked" type="checkbox" /
+    label for="test-input6"  Yellow
   p
     input#filled-in-box.filled-in checked="checked" type="checkbox" /
     label for="filled-in-box"  Filled in
@@ -177,11 +177,11 @@ form action="#"
     input#indeterminate-checkbox type="checkbox" /
     label for="indeterminate-checkbox"  Indeterminate Style
   p
-    input#test7 checked="checked" disabled="disabled" type="checkbox" /
-    label for="test7"  Green
+    input#test-input7 checked="checked" disabled="disabled" type="checkbox" /
+    label for="test-input7"  Green
   p
-    input#test8 disabled="disabled" type="checkbox" /
-    label for="test8"  Brown
+    input#test-input8 disabled="disabled" type="checkbox" /
+    label for="test-input8"  Brown
 
 
 h5 Switch
@@ -232,7 +232,7 @@ br
 h5 HTML5 Slider
 form action="#" 
   p.range-field
-    input#test5 max="100" min="0" type="range" /
+    input#test-input9 max="100" min="0" type="range" /
 
 h5 Datepicker
 input type="date" class="datepicker"
@@ -253,7 +253,7 @@ h5 Character Counter
         label for="input_text"  Input text
     .row
       .input-field.col.s12
-        textarea#textarea1.materialize-textarea data-length="120" 
+        textarea#textarea0.materialize-textarea data-length="120" 
         label for="textarea1"  Textarea
 
 

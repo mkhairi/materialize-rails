@@ -3,7 +3,6 @@ $(document).on 'ready turbolinks:load', ->
   $('.dropdown-button').dropdown()
   $('.modal').modal();
   $('select').material_select();
-  $('ul.tabs').tabs();
   Waves.displayEffect()
 
 
