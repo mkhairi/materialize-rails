@@ -1,25 +1,31 @@
-h3 Posts
+div class="row"
+  div id="admin" class="col s12"
+    div class="card material-table"
+      div class="table-header"
 
-table#dttb.table
-  thead
-    tr
-      th width="40%"Title
-      th width="60%" Body
-      th width="40px" Published
-      th width="40px"
-      th width="40px"
-      th width="40px"
+        h5 Posts
+        .actions data-turbolinks="false"
+          a.search-toggle.waves-effect.btn-flat.nopadding href="#" 
+            i.material-icons search
 
-  tbody
-    - @posts.each do |post|
-      tr
-        td = post.title
-        td = post.body
-        td = post.published
-        td = link_to 'Show', post
-        td = link_to 'Edit', edit_post_path(post)
-        td = link_to 'Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
-br
+      table#dttb.table
+        thead
+          tr
+            th width="30%"Title
+            th Body
+            th width="100px" Published
+            th 
+
+        tbody
+          - @posts.each do |post|
+            tr
+              td = post.title
+              td = post.body
+              td = post.published
+              td.right-align
+                = link_to 'Show ', post
+                = link_to ' Edit ', edit_post_path(post)
+                = link_to ' Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
 
 
 

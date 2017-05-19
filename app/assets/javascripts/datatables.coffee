@@ -15,7 +15,29 @@
 #= require datatables/extensions/Select/dataTables.select
 
 
+$.extend $.fn.dataTable.defaults,
+  dom: '<\'hiddensearch\'f\'>' + 'tr' + '<\'table-footer\'lip\'>'
+  responsive: true
+  pagingType: 'full'
+  renderer: 'material'
+  autoWidth: false
+  language:
+    stripClasses: ''
+    search: ''
+    searchPlaceholder: 'Enter Keywords Here'
+    info: '_START_ -_END_ of _TOTAL_'
+    lengthMenu: '<span>Rows per page:</span><select class="browser-default">' + '<option value="10">10</option>' + '<option value="20">20</option>' + '<option value="30">30</option>' + '<option value="40">40</option>' + '<option value="50">50</option>' + '<option value="-1">All</option>' + '</select></div>'
+    paginate:
+      previous: "<i class='material-icons'>navigate_before</i>"
+      next:     "<i class='material-icons'>navigate_next</i>"
+      first:    "<i class='material-icons'>first_page</i>"
+      last:     "<i class='material-icons'>last_page</i>"
 
 $(document).on 'turbolinks:load', ->
   $("table#dttb").DataTable() unless $.fn.DataTable.isDataTable("table#dttb")
-  $("table[id^=dttb-]").DataTable()
+  $('.search-toggle').click ->
+    if $('.hiddensearch').css('display') == 'none'
+      $('.hiddensearch').slideDown()
+    else
+      $('.hiddensearch').slideUp()
+    return
