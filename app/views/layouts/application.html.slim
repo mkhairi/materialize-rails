@@ -27,6 +27,23 @@ html
                 span Posts
                 span.new.badge 4
             li: a href="/components"  Components
+            /! Dropdown Trigger
+
+            - if user_signed_in?
+              li
+                a.dropdown-button data-activates="dropdown1" href="#!" 
+                  span = current_user.email
+                  i.material-icons.right arrow_drop_down
+            - else
+              li = link_to (t :sign_in), new_user_session_url
+
+
+          - if user_signed_in?
+            ul#dropdown1.dropdown-content
+              li = link_to (t :profile), edit_user_registration_url
+              li.divider
+              li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
+
 
       /! Tap Target Structure
       .tap-target.sidenav class="#{color} darken-1" data-activates="sidenav" 
@@ -66,11 +83,19 @@ html
           a.waves-effect href="https://github.com/mkhairi/materialize-sass"  GitHub
 
 
+
     main
       = yield(:jumbotron) if content_for?(:jumbotron)
 
-      .container
-        = yield
+      - if devise_controller?
+        section#login
+          .container-fluid.pt-3
+            .row
+              .col.s4.offset-s4
+                == yield
+      - else
+        .container
+            == yield
 
 
 
