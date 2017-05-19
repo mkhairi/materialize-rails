@@ -1,5 +1,6 @@
 @import "materialize";
 @import "materialize/extras/nouislider";
+@import "datatables";
 
 body {
   display: flex;
@@ -34,3 +35,4 @@ main {
 :not(pre) > code[class*="language-"], pre[class*="language-"] {
     background: #f5f2f0 none repeat scroll 0 0;
 }
+
