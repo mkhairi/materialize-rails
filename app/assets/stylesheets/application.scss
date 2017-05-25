@@ -7,12 +7,16 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #fcfcfc;
 }
 
 main {
   flex: 1 0 auto;
 }
-     
+   
+.cover {
+  background-color: #fff;
+}  
 
 .icon-container .icon-preview span {
     text-align: left;
