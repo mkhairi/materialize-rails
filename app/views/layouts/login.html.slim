@@ -1,0 +1,78 @@
+doctype html
+html
+  head
+    meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
+    meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport" /
+    meta content="/" name="turbolinks-root" 
+    meta name="turbolinks-cache-control" content="no-preview"
+    title Materialize
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
+    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = csrf_meta_tags
+    - color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
+
+  body class="#{color} lighten-1"
+    header.navbar-fixed
+      nav class="#{color} darken-1" style="box-shadow: none;"
+       .nav-wrapper.container
+          a#logo-container.brand-logo href="/"  
+            img src="/rails-logo.svg" width="112" height="60" style="fill: white !important;"
+          ul#nav-mobile.right
+         
+
+            - if user_signed_in?
+              li
+                a.dropdown-button data-activates="dropdown1" href="#!" 
+                  span = current_user.email
+                  i.material-icons.right arrow_drop_down
+            - else
+              li = link_to (t :sign_in), new_user_session_url
+
+
+          - if user_signed_in?
+            ul#dropdown1.dropdown-content
+              li = link_to (t :profile), edit_user_registration_url
+              li.divider
+              li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
+
+
+  
+
+    main
+      br
+      br
+      - if devise_controller?
+        section#login
+          .container-fluid.pt-3
+            .row
+              .col.s4.offset-s4
+                == yield
+      - else
+        .container
+            == yield
+
+
+
+    footer.page-footer class="#{color}"
+      .container
+        .row
+          .col.l6.s12
+            h5.white-text Footer Content
+            p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
+          .col.l4.offset-l2.s12
+            h5.white-text Links
+            ul
+              li
+                a.grey-text.text-lighten-3 href="#!"  Link 1
+              li
+                a.grey-text.text-lighten-3 href="#!"  Link 2
+              li
+                a.grey-text.text-lighten-3 href="#!"  Link 3
+              li
+                a.grey-text.text-lighten-3 href="#!"  Link 4
+      .footer-copyright  class="#{color} darken-1"
+        .container
+          | © 2014 Copyright Text
+          a.grey-text.text-lighten-4.right href="#!"  More Links
+
