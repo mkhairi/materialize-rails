@@ -1,9 +1,19 @@
-h2
-  | Forgot your password?
-= simple_form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f|
-  = f.error_notification
-  .form-inputs
-    = f.input :email, required: true, autofocus: true
-  .form-actions
-    = f.button :submit, "Send me reset password instructions"
-= render "users/shared/links"
+.row.login-form
+  .col.s12
+    .card.hoverable
+      .card-content
+        span.card-title.center Forgot your Password?
+        .divider
+        = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
+          - if devise_error_messages? || alert
+            .form-errors.red.lighten-1
+              = devise_error_messages!
+              = alert
+          .form-inputs.row
+            = f.input :email, autofocus: true, required: true
+          .form-actions.center
+            = f.button :submit, "Send Me Reset Instructions"
+        .card-action
+          .devise-links
+            = render "devise/shared/links"
+   
