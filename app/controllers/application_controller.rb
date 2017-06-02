@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
   respond_to :html
   layout :set_layout
-
+  before_action :load_color
   protect_from_forgery with: :exception
 
   # optional just for fun
@@ -15,6 +15,10 @@ class ApplicationController < ActionController::Base
     hit += 1
     cookies['hit'] = hit
     hit
+  end
+
+  def load_color
+    @color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
   end
 
   protected
