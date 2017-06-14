@@ -4,6 +4,7 @@ $(document).on 'ready turbolinks:load', ->
   $('.modal').modal();
   $('select').material_select();
   Waves.displayEffect()
+  console.log "load init on ready or turbolinks:load"
 
 
   $('textarea').trigger('autoresize')
