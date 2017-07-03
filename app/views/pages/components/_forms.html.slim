@@ -234,15 +234,31 @@ form action="#"
   p.range-field
     input#test-input9 max="100" min="0" type="range" /
 
-h5 Datepicker
-input type="date" class="datepicker"
+h5 Date Picker
+input type="text" class="datepicker"
 
 javascript:
   $('.datepicker').pickadate({
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
-        
+       
+h5 Time Picker
+input type="text" class="timepicker" 
+
+javascript:
+  $('.timepicker').pickatime({
+    default: 'now', // Set default time
+    fromnow: 0,       // set default time to * milliseconds from now (using with default = 'now')
+    twelvehour: false, // Use AM/PM or 24-hour format
+    donetext: 'OK', // text for done-button
+    cleartext: 'Clear', // text for clear-button
+    canceltext: 'Cancel', // Text for cancel-button
+    autoclose: false, // automatic close timepicker
+    ampmclickable: true, // make AM PM clickable
+    aftershow: function(){} //Function for after opening timepicker  
+  });
+
 
 h5 Character Counter
 .row
