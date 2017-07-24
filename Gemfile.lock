@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/mkhairi/materialize-sass.git
-  revision: 4ffef727ebf0f30ccbd160de5e6bf3b6f6d191f8
+  revision: b07a5b4f786c0ef34f3e0ed9cd8224610add5155
   specs:
-    materialize-sass (0.100.0)
+    materialize-sass (0.100.1)
       sass (~> 3.3)
 
 GEM
@@ -247,4 +247,4 @@ RUBY VERSION
    ruby 2.4.1p111
 
 BUNDLED WITH
-   1.15.2
+   1.15.3
