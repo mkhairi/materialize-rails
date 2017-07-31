@@ -19,4 +19,4 @@
 .byebug_history
 /public/packs
 /public/assets
-/node_modules
+/config/secrets.yml.*
