@@ -7,7 +7,7 @@ end
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.0'
+gem 'rails', '~> 5.1.2'
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -61,7 +61,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'decent_exposure'
 gem 'responders'
-gem 'materialize-sass', github: "mkhairi/materialize-sass"
+gem 'materialize-sass'
 gem 'show_for'
 gem 'jquery-datatables'
 
