@@ -20,3 +20,4 @@
 /public/packs
 /public/assets
 /config/secrets.yml.*
+.env
