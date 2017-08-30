@@ -61,7 +61,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'decent_exposure'
 gem 'responders'
-gem 'materialize-sass'
+gem 'materialize-sass', github: "mkhairi/materialize-sass"
 gem 'show_for'
 gem 'jquery-datatables'
 
