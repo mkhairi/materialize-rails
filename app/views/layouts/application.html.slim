@@ -1,25 +1,27 @@
 doctype html
 html
   head
+    title Materialize
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
-    meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport" /
+    meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport" /
     meta content="/" name="turbolinks-root" 
     meta name="turbolinks-cache-control" content="no-cache"
-    title Materialize
-    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
+    = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
     = javascript_include_tag 'application', 'data-turbolinks-track': true
-    = csrf_meta_tags
+
     - swatch = %w(lighten darken accent).sample
 
   body
     header.navbar-fixed 
       nav class="#{@color} darken-1"
        .nav-wrapper.container
-          a#sidenav href="#" data-activates="slide-out" class="button-collapse show-on-large" data-turbolinks="false"
+          a#sidenav href="#" data-target="slide-out" class="button-collapse sidenav-trigger show-on-large" data-turbolinks="false"
             i class="material-icons right" apps
+          
           a#logo-container.brand-logo href="/"  
             img src="/rails-logo.svg" width="112" height="60" style="fill: white !important;"
+          
           ul#nav-mobile.right
             li: a href="/" Home
             li
@@ -27,11 +29,12 @@ html
                 span Posts
                 span.new.badge 4
             li: a href="/components"  Components
+            li: a href="/forms"  Forms
             /! Dropdown Trigger
 
             - if user_signed_in?
               li
-                a.dropdown-button data-activates="dropdown1" href="#!" 
+                a.dropdown-button data-target="dropdown1" href="#!" 
                   span = current_user.email
                   i.material-icons.right arrow_drop_down
             - else
@@ -44,46 +47,9 @@ html
               li.divider
               li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
 
-
-      /! Tap Target Structure
-      .tap-target.sidenav class="#{@color} darken-1" data-activates="sidenav" 
-        .tap-target-content
-          h5 Open Sidebar
-          p Tell me what not working
-      - if current_hit <= 1
-        javascript:
-          $('.tap-target.sidenav').tapTarget('open');
-
           
     aside
-      ul#slide-out.side-nav
-        li
-          .userView
-            .background
-              img src="http://materializecss.com/images/office.jpg" /
-            a href="#!user" 
-              img.circle src="http://materializecss.com/images/yuna.jpg" /
-            a href="#!name" 
-              span.white-text.name Yuna
-            a href="#!email" 
-              span.white-text.email yunalis@gmail.com
-        li
-          a href="/posts" 
-            i.material-icons cloud
-            span Posts
-        li
-          a href="/components" 
-            i.material-icons settings
-            span Component
-        li
-          .divider
-        li
-          a.subheader Give some star
-        li
-          a.waves-effect href="https://github.com/mkhairi/materialize-sass"  Gems
-        li
-          a.waves-effect href="https://github.com/mkhairi/materialize-rails" Sources
-
+     = render "layouts/sidebar"
 
     main
       = yield(:jumbotron) if content_for?(:jumbotron)
@@ -101,33 +67,16 @@ html
 
 
     footer.page-footer class="#{@color}"
-      .container
-        .row
-          .col.l6.s12
-            h5.white-text Footer Content
-            p.grey-text.text-lighten-4 You can use rows and columns here to organize your footer content.
-          .col.l4.offset-l2.s12
-            h5.white-text Links
-            ul
-              li
-                a.grey-text.text-lighten-3 href="#!"  Link 1
-              li
-                a.grey-text.text-lighten-3 href="#!"  Link 2
-              li
-                a.grey-text.text-lighten-3 href="#!"  Link 3
-              li
-                a.grey-text.text-lighten-3 href="#!"  Link 4
-      .footer-copyright  class="#{@color} darken-1"
-        .container
-          | © 2014 Copyright Text
-          a.grey-text.text-lighten-4.right href="#!"  More Links
-          
+      = render "layouts/footer"
 
-    javascript:
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-      ga('create', 'UA-41818279-4', 'auto');
-      ga('send', 'pageview');
+    /! Tap Target Structure
+    .tap-target.sidenav-btn class="#{@color} darken-1" data-target="sidenav" 
+      .tap-target-content
+        h5 Open Sidebar
+        p Tell me what not working
+    
+    // For demo perpose only
+    - if current_hit <= 1
+      javascript:
+        $('.tap-target.sidenav-btn').featureDiscovery("open");
