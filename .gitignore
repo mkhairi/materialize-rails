@@ -21,3 +21,6 @@
 /public/assets
 /config/secrets.yml.*
 .env
+/public/packs
+/public/packs-test
+/node_modules

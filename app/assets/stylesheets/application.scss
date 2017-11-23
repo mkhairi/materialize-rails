@@ -3,42 +3,6 @@
 @import "materialize/extras/nouislider";
 @import "datatables";
 @import "devise";
+@import "custom";
 
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  background-color: #fcfcfc;
-}
-
-main {
-  flex: 1 0 auto;
-}
-   
-.cover {
-  background-color: #fff;
-}  
-
-.icon-container .icon-preview span {
-    text-align: left;
-    display: block;
-    font-size: 12px;
-}
-
-.icon-container i {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.btn {
-  margin-left: 10px;
-}
-
-:not(pre) > code[class*="language-"] {
-    border-radius: 0.3em;
-    padding: 0.1em;
-}
-:not(pre) > code[class*="language-"], pre[class*="language-"] {
-    background: #f5f2f0 none repeat scroll 0 0;
-}
 

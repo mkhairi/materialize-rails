@@ -2,12 +2,14 @@
   "name": "materialize_apps",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "^3.0.2",
     "autoprefixer": "^6.7.7",
     "babel-core": "^6.24.1",
     "babel-loader": "7.x",
     "babel-preset-env": "^1.4.0",
     "coffee-loader": "^0.7.3",
     "coffee-script": "^1.12.5",
+    "coffeescript": "1.12.7",
     "compression-webpack-plugin": "^0.4.0",
     "css-loader": "^0.28.1",
     "extract-text-webpack-plugin": "^2.1.0",
@@ -23,11 +25,14 @@
     "rails-erb-loader": "^5.0.0",
     "sass-loader": "^6.0.3",
     "style-loader": "^0.17.0",
+    "vue": "^2.5.8",
+    "vue-loader": "^13.5.0",
+    "vue-template-compiler": "^2.5.8",
     "webpack": "^2.5.0",
     "webpack-manifest-plugin": "^1.1.0",
     "webpack-merge": "^4.1.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.4.5"
+    "webpack-dev-server": "^2.9.4"
   }
 }

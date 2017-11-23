@@ -1,18 +1,50 @@
-br
-= render "pages/forms/autocomplete"
-br
-= render "pages/forms/checkboxes"
-br
-= render "pages/forms/chips"
-br
-= render "pages/forms/picker"
-br
-= render "pages/forms/slider"
-br
-= render "pages/forms/radios"
-br
-= render "pages/forms/select"
-br
-= render "pages/forms/switches"
-br
-= render "pages/forms/inputs"
+.row
+  .col.m3.toc data-turbolinks="false"
+    ul.collection
+      li.collection-item
+        a href="#autocomplete-demo" Autocomplete
+      li.collection-item
+        a href="#checkboxes-demo" Checkboxes
+      li.collection-item
+        a href="#chips-demo" Chips      
+      li.collection-item
+        a href="#picker-demo" Picker
+      li.collection-item
+        a href="#slider-demo" Slider
+      li.collection-item
+        a href="#slider-demo" Radios
+      li.collection-item
+        a href="#select-demo" Select  
+      li.collection-item
+        a href="#switches-demo" Switches
+      li.collection-item
+        a href="#inputs-demo" Inputs           
+
+  .col.m9
+    br
+    h4 id="autocomplete-demo" Autocomplete
+    = render "pages/forms/autocomplete"
+    br
+    h4 id="checkboxes-demo" Checkboxes
+    = render "pages/forms/checkboxes"
+    br
+    h4 id="chips-demo" Chips
+    = render "pages/forms/chips"
+    br
+    h4 id="picker-demo" Picker
+    = render "pages/forms/picker"
+    br
+    h4 id="slider-demo" Slider
+    = render "pages/forms/slider"
+    br
+    h4 id="radios-demo" Radios
+    = render "pages/forms/radios"
+    br
+    h4 id="select-demo" Select
+    = render "pages/forms/select"
+    br
+    h4 id="switches-demo" Switches
+    = render "pages/forms/switches"
+    br
+    h4 id="inputs-demo" Inputs
+    = render "pages/forms/inputs"

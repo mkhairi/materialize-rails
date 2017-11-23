@@ -9,7 +9,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+# gem 'pg', '~> 0.18'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
@@ -57,14 +57,36 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem 'high_voltage'
-gem 'devise'
-gem 'simple_form'
+# leave default rails gem alone
+
+group :development do
+  # Use sqlite as the database for Active Record
+  gem 'sqlite3'
+end
+
+group :production do
+  # Use postgresql as the database for Active Record
+  gem 'pg'
+end
+
+# templating engine
 gem 'slim-rails'
-gem 'decent_exposure'
-gem 'responders'
-gem 'materialize-sass', github: "mkhairi/materialize-sass"
+
+# static pages
+gem 'high_voltage'
+
+# magic things
+gem 'devise'
 gem 'show_for'
+gem 'simple_form'
+gem 'responders'
+gem 'decent_exposure'
+
+# assets
+gem 'materialize-sass', github: "mkhairi/materialize-sass"
 gem 'jquery-datatables'
+
+# wsl ftw
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
 ruby '2.4.2'
