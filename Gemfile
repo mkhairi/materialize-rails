@@ -86,6 +86,9 @@ gem 'decent_exposure'
 gem 'materialize-sass', github: "mkhairi/materialize-sass"
 gem 'jquery-datatables'
 
+#helpers
+gem 'inline_svg'
+
 # wsl ftw
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 
