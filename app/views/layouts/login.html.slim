@@ -10,45 +10,25 @@ html
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
     = javascript_include_tag 'application', 'data-turbolinks-track': true
     = csrf_meta_tags
-    - color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
-
-  body class="#{color}"
-    header.navbar-fixed
-      nav class="#{color} darken-1"
-       .nav-wrapper.container
-          a#logo-container.brand-logo href="/"  
-            img src="/rails-logo.svg" width="112" height="60" style="fill: white !important;"
-          ul#nav-mobile.right
-         
-
-            - if user_signed_in?
-              li
-                a.dropdown-button data-activates="dropdown1" href="#!" 
-                  span = current_user.email
-                  i.material-icons.right arrow_drop_down
-            - else
-              li = link_to (t :sign_in), new_user_session_url
+    - @color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
+    
+    css:
+      .brand-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+      }
 
 
-          - if user_signed_in?
-            ul#dropdown1.dropdown-content
-              li = link_to (t :profile), edit_user_registration_url
-              li.divider
-              li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
 
-    main
-      br
-      br
-      - if devise_controller?
-        section#login
-          .container-fluid.pt-3
-            .row
-              .col.s4.offset-s4
-                == yield
-      - else
-        .container
-            == yield
-
-    footer.page-footer class="#{color}"
-      = render "layouts/footer"
-
+  body class="#{@color}"
+    main style="padding-top: 4rem"
+      section#login
+        .container-fluid.pt-3
+          .row
+            .col.s4.offset-s4
+              .brand-logo.mx-auto
+                = inline_svg "logo.svg", class: "main-logo"
+                i.material-icons.white-text close
+                = inline_svg "rails-logo.svg", class: "main-logo"
+              == yield
