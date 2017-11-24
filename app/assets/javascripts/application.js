@@ -13,7 +13,7 @@
 //= require jquery3
 //= require rails-ujs
 //= require materialize/extras/nouislider
-//= require materialize-sprockets
+//= require materialize
 //= require datatables
 //= require turbolinks
 //= require init
