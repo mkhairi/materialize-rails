@@ -68,15 +68,3 @@ html
 
     footer.page-footer class="#{@color}"
       = render "layouts/footer"
-
-
-    /! Tap Target Structure
-    .tap-target.sidenav-btn class="#{@color} darken-1" data-target="sidenav" 
-      .tap-target-content
-        h5 Open Sidebar
-        p Tell me what not working
-    
-    // For demo perpose only
-    - if current_hit <= 1
-      javascript:
-        $('.tap-target.sidenav-btn').featureDiscovery("open");

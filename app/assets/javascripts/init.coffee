@@ -5,8 +5,9 @@ $(document).on 'ready turbolinks:load', ->
 $(document).on 'ready turbolinks:before-visit', ->
   elem = document.querySelector('#slide-out');
   instance = M.Sidenav.getInstance(elem) if elem
-  instance.close() if instance.isOpen #close on click
-  instance.destroy()
+  if instance 
+    instance.close() if instance.isOpen #close on click
+    instance.destroy()
 
 $(document).on 'ready turbolinks:load', ->
   Waves.displayEffect()
@@ -26,7 +27,6 @@ $(document).on 'ready turbolinks:load', ->
   $('.tooltipped').tooltip();
   $('select').not('.disabled').select();
 
-  $('.tap-target').featureDiscovery();
   $('input.autocomplete').autocomplete data:
     'Apple': null
     'Microsoft': null

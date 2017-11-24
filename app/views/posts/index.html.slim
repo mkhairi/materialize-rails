@@ -35,14 +35,3 @@ div class="row"
 .fixed-action-btn
   a#newpost.waves-effect.waves-light.btn.btn-floating.btn-large.cyan href="#{new_post_path}" 
     i.large.material-icons add
-
-/! Tap Target Structure
-.tap-target.newpost.cyan data-activates="newpost" 
-  .tap-target-content
-    h5 Start posting
-    p Tell me what not working
-
-
-- if current_post_hit <= 1
-  javascript:
-    $('.tap-target.newpost').tapTarget('open');
