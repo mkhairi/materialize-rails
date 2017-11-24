@@ -1,24 +1,32 @@
-# README
+## Lyrics
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Look at the stars,  
+Look how they shine for you,  
+And everything you do,  
+Yeah, they were all yellow.  
 
-Things you may want to cover:
+I came along,  
+I wrote a ```code``` for you,  
+And all the things you do,  
+And it was called "Yellow".  
+.  
+.  
+.  
 
-* Ruby version
+It's true,  
+Look how they shine for you,  
+Look how they shine for you,  
+Look how they shine for,  
+Look how they shine for you,  
+Look how they shine for you,  
+Look how they shine.
 
-* System dependencies
+Look at the stars,  
+Look how they shine for you,  
+And all the things that you do.  
 
-* Configuration
+## Disclaimer
+Clone at your own risk
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Contributing
+Any Pull requests are welcome to improve this example repo
