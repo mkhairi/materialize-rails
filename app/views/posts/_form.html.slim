@@ -18,23 +18,12 @@
           i.material-icons.prefix descriptions
           = f.text_area :body, placeholder: "some text here", class: "materialize-textarea", data: {length: "360"}
           = f.label :body
-      .row
-        .input-field.col.s10
-          i.material-icons.prefix face
-          = f.radio_button :gender, "m"
-          = f.label :gender_m, "Male"
-          = f.radio_button :gender, "f"
-          = f.label :gender_f, "Female"
+          
       .row
         .input-field.col.s10
           i.material-icons.prefix published
           = f.check_box :published, class:"checkbox"
           = f.label :published
-      .row
-        .input-field.col.s10
-          i.material-icons.prefix cake
-          = f.text_field :birthday, class: "datepicker"
-          = f.label :birthday
 
       .row
         .input-field.col.s3

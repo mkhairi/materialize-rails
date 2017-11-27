@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mkhairi/materialize-sass.git
-  revision: b23e75ddbb36e288060ca5059302436cc5a22c96
+  revision: 5421b137307f8d55d25bf3f9dafc881e594123bb
   specs:
     materialize-sass (1.0.0.alpha1)
       autoprefixer-rails (>= 6.0.3)

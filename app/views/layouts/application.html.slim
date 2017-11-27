@@ -9,9 +9,8 @@ html
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
     = javascript_include_tag 'application', 'data-turbolinks-track': true
-
+    = toast
     - swatch = %w(lighten darken accent).sample
-
   body
     header.navbar-fixed 
       nav class="#{@color} darken-1"

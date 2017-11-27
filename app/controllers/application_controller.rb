@@ -2,7 +2,8 @@ require "application_responder"
 
 class ApplicationController < ActionController::Base
   self.responder = ApplicationResponder
-  respond_to :html
+  respond_to :html, :js, :json
+
   layout :set_layout
   before_action :load_color
   protect_from_forgery with: :exception
