@@ -1,5 +1,8 @@
 .login-form {
-  margin: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  display: flex;
+  justify-content: center;
 
   .card {
     max-width: 500px;

@@ -1,21 +1,20 @@
-.row.login-form
-  .col.s12
-    .card.hoverable
-      .card-content
-        span.card-title.center Log In
-        .divider
-        = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
-          - if devise_error_messages? || alert
-            .form-errors.red.lighten-1
-              = devise_error_messages!
-              = alert
-          .form-inputs.row
-            = f.input :email, required: true, autofocus: true
-            = f.input :password, required: true, autocomplete: "off", icon: "lock", hint: false
-            = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-          .form-actions.center
-            = f.button :submit, "Log In"
-        .card-action
-          .devise-links
-            = render "users/shared/links"
-   
+.login-form
+  .card.hoverable
+    .card-content
+      span.card-title.center Log In
+      .divider
+      = simple_form_for resource, as: resource_name, url: session_path(resource_name) do |f|
+        - if devise_error_messages? || alert
+          .form-errors.red.lighten-1
+            = devise_error_messages!
+            = alert
+        .form-inputs.row
+          = f.input :email, required: true, autofocus: true
+          = f.input :password, required: true, autocomplete: "off", icon: "lock", hint: false
+          = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+        .form-actions.center
+          = f.button :submit, "Log In"
+      .card-action
+        .devise-links
+          = render "users/shared/links"
+ 

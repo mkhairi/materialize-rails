@@ -1,19 +1,18 @@
-.row.login-form
-  .col.s12
-    .card.hoverable
-      .card-content
-        span.card-title.center Forgot your Password?
-        .divider
-        = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
-          - if devise_error_messages? || alert
-            .form-errors.red.lighten-1
-              = devise_error_messages!
-              = alert
-          .form-inputs.row
-            = f.input :email, autofocus: true, required: true
-          .form-actions.center
-            = f.button :submit, "Send Me Reset Instructions"
-        .card-action
-          .devise-links
-            = render "users/shared/links"
-   
+.login-form
+  .card.hoverable
+    .card-content
+      span.card-title.center Forgot your Password?
+      .divider
+      = simple_form_for resource, as: resource_name, url: password_path(resource_name), html: { method: :post } do |f|
+        - if devise_error_messages? || alert
+          .form-errors.red.lighten-1
+            = devise_error_messages!
+            = alert
+        .form-inputs.row
+          = f.input :email, autofocus: true, required: true
+        .form-actions.center
+          = f.button :submit, "Send Me Reset Instructions"
+      .card-action
+        .devise-links
+          = render "users/shared/links"
+ 
