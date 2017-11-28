@@ -26,6 +26,11 @@
           = f.label :published
 
       .row
+        .input-field.col.s10
+          i.material-icons.prefix images
+          = f.file_field :images, multiple: true 
+
+      .row
         .input-field.col.s3
           = f.button class: "waves-effect waves-light btn ", type: :submit do |btn|
             | Create

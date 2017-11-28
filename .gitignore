@@ -13,15 +13,24 @@
 !/log/.keep
 !/tmp/.keep
 
+# Ignore uploaded files in development
+/storage/*
+
 /node_modules
 /yarn-error.log
 
-.byebug_history
-/public/packs
 /public/assets
-/config/secrets.yml.*
-.env
+.byebug_history
+
+# Ignore master key for decrypting credentials and more.
+/config/master.key
+
+/node_modules
+/yarn-error.log
+
 /public/packs
 /public/packs-test
-/node_modules
+
 db/*.sqlite3
+
+.env

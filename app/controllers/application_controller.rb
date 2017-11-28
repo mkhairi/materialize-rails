@@ -6,7 +6,6 @@ class ApplicationController < ActionController::Base
 
   layout :set_layout
   before_action :load_color
-  protect_from_forgery with: :exception
 
   # optional just for fun
   helper_method :current_hit

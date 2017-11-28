@@ -12,6 +12,7 @@
 //
 //= require jquery3
 //= require rails-ujs
+//= require activestorage
 //= require materialize/extras/nouislider
 //= require materialize
 //= require datatables

@@ -22,6 +22,7 @@ class PostsController < ApplicationController
     unless @post.save
       flash[:error] = "Could not be save"
     end
+    @post.images.attach(params[:post][:images])
     respond_with(@post)
   end
 
