@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.4.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.0.beta1'
+gem 'rails', '~> 5.2.0.beta2'
 # Use postgresql as the database for Active Record
 # gem 'pg', '~> 0.18'
 # Use Puma as the app server
@@ -97,5 +97,3 @@ gem 'inline_svg'
 
 # wsl ftw
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
-
-ruby '2.4.2'
