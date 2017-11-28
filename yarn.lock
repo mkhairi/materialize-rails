@@ -5429,7 +5429,7 @@ vue-style-loader@^3.0.0:
     hash-sum "^1.0.2"
     loader-utils "^1.0.2"
 
-vue-template-compiler@^2.5.7:
+vue-template-compiler@^2.5.9:
   version "2.5.9"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.5.9.tgz#7fabc73c8d3d12d32340cd86c5fc33e00e86d686"
   dependencies:
@@ -5446,7 +5446,7 @@ vue-turbolinks@^2.0.0:
   dependencies:
     vue "^2.2.4"
 
-vue@^2.2.4, vue@^2.5.7:
+vue@^2.2.4, vue@^2.5.9:
   version "2.5.9"
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.5.9.tgz#b2380cd040915dca69881dafd121d760952e65f7"
 
@@ -5474,7 +5474,7 @@ webpack-dev-middleware@^1.11.0:
     range-parser "^1.0.3"
     time-stamp "^2.0.0"
 
-webpack-dev-server@^2.9.4:
+webpack-dev-server@^2.9.5:
   version "2.9.5"
   resolved "https://registry.yarnpkg.com/webpack-dev-server/-/webpack-dev-server-2.9.5.tgz#79336fba0087a66ae491f4869f6545775b18daa8"
   dependencies:
