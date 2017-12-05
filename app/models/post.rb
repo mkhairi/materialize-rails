@@ -3,4 +3,5 @@ class Post < ActiveRecord::Base
   validates :title, :body, presence: :true
 
   has_many_attached :images
+  
 end

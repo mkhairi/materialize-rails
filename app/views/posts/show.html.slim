@@ -10,9 +10,10 @@ p
   strong Published:
   = @post.published
 
-p 
-  strong Images
-  = image_tag @post.images.first 
+- if @post.images.present?
+  p 
+    strong Images
+    = image_tag @post.images.first
   
 = link_to 'Edit', edit_post_path(@post)
 '|
