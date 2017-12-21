@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/mkhairi/materialize-sass.git
-  revision: 7c348c4d505a7c15551797512f19377971e73228
+  revision: 91089afda8eba56216ce98126abc40a310d90c08
   specs:
     materialize-sass (1.0.0.alpha2)
       autoprefixer-rails (>= 6.0.3)
@@ -54,11 +54,11 @@ GEM
     archive-zip (0.7.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
-    autoprefixer-rails (7.2.1)
+    autoprefixer-rails (7.2.3)
       execjs
     bcrypt (3.1.11)
     bindex (0.5.0)
-    bootsnap (1.1.5)
+    bootsnap (1.1.7)
       msgpack (~> 1.0)
     builder (3.2.3)
     byebug (9.1.0)
@@ -99,7 +99,7 @@ GEM
     high_voltage (3.0.0)
     i18n (0.9.1)
       concurrent-ruby (~> 1.0)
-    inline_svg (1.3.0)
+    inline_svg (1.3.1)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
     io-like (0.3.0)
@@ -124,7 +124,7 @@ GEM
     mini_mime (1.0.0)
     mini_portile2 (2.3.0)
     minitest (5.10.3)
-    msgpack (1.1.0)
+    msgpack (1.2.0)
     multi_json (1.12.2)
     nio4r (2.1.0)
     nokogiri (1.8.1)
@@ -134,7 +134,7 @@ GEM
     public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
-    rack-proxy (0.6.2)
+    rack-proxy (0.6.3)
       rack
     rack-test (0.8.2)
       rack (>= 1.0, < 3)
@@ -171,7 +171,7 @@ GEM
       railties (>= 4.2.0, < 5.3)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
-    sass (3.5.3)
+    sass (3.5.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -220,7 +220,7 @@ GEM
     turbolinks-source (5.0.3)
     tzinfo (1.2.4)
       thread_safe (~> 0.1)
-    uglifier (4.0.1)
+    uglifier (4.0.2)
       execjs (>= 0.3.0, < 3)
     warden (1.2.7)
       rack (>= 1.0)
@@ -229,7 +229,7 @@ GEM
       activemodel (>= 5.0)
       bindex (>= 0.4.0)
       railties (>= 5.0)
-    webpacker (3.0.2)
+    webpacker (3.2.0)
       activesupport (>= 4.2)
       rack-proxy (>= 0.6.1)
       railties (>= 4.2)
