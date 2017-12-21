@@ -2,7 +2,7 @@
   "name": "materialize_apps",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "^3.0.2",
+    "@rails/webpacker": "^3.2.0",
     "coffeescript": "1.12.7",
     "vue": "^2.5.13",
     "vue-loader": "^13.6.0",
@@ -12,6 +12,6 @@
     "vue-turbolinks": "^2.0.0"
   },
   "devDependencies": {
-    "webpack-dev-server": "^2.9.5"
+    "webpack-dev-server": "^2.9.7"
   }
 }
