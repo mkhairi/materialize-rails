@@ -5,9 +5,9 @@
 Rails.application.config.content_security_policy do |p|
   p.default_src :self, :https
   p.font_src    :self, :https, :data
-  p.img_src     :self, :https, :data
+  p.img_src     :self, :http, :data
   p.object_src  :none
-  p.script_src  :self, :https, :unsafe_eval, :unsafe_inline
+  p.script_src  :self, :https, :unsafe_eval, :unsafe_inline, :data
   p.style_src   :self, :https, :unsafe_inline
 
   # Specify URI for violation reports
