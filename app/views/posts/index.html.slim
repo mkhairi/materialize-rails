@@ -16,6 +16,8 @@ div class="row"
             th width="30%"Title
             th Body
             th width="100px" Published
+            th Created at
+            th Updated at
             th 
 
         tbody
@@ -24,6 +26,8 @@ div class="row"
               td = post.title
               td = post.body
               td = post.published
+              td = post.created_at
+              td = post.updated_at
               td.right-align
                 = link_to 'Show ', post
                 = link_to ' Edit ', edit_post_path(post)
