@@ -33,11 +33,17 @@ $.extend $.fn.dataTable.defaults,
       first:    "<i class='material-icons'>first_page</i>"
       last:     "<i class='material-icons'>last_page</i>"
 
+dttb = null
 $(document).on 'turbolinks:load', ->
-  $("table#dttb").DataTable() unless $.fn.DataTable.isDataTable("table#dttb")
+  dttb = $("table#dttb").DataTable() unless $.fn.DataTable.isDataTable("table#dttb")
   $('.search-toggle').click ->
     if $('.hiddensearch').css('display') == 'none'
       $('.hiddensearch').slideDown()
     else
       $('.hiddensearch').slideUp()
-    return
+
+$(document).on 'turbolinks:before-cache', ->
+  if dttb
+    dttb.destroy() 
+    dttb = null
+

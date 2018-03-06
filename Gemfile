@@ -84,17 +84,17 @@ gem 'slim-rails'
 gem 'high_voltage'
 
 # magic things
-gem 'devise', github: "plataformatec/devise"
+gem 'devise',            github: "plataformatec/devise"
 gem 'show_for'
 gem 'simple_form'
 gem 'responders'
 gem 'decent_exposure'
 
 # assets
-gem 'materialize-sass', github: "mkhairi/materialize-sass"
-gem 'jquery-datatables'
+gem 'materialize-sass',  github: "mkhairi/materialize-sass"
+gem 'jquery-datatables', github: "mkhairi/jquery-datatables"
 
-#helpers
+# helpers
 gem 'inline_svg'
 
 # wsl ftw

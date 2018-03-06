@@ -1,29 +1,5 @@
-## Lyrics
-
-Look at the stars,  
-Look how they shine for you,  
-And everything you do,  
-Yeah, they were all yellow.  
-
-I came along,  
-I wrote a ```code``` for you,  
-And all the things you do,  
-And it was called "Yellow".  
-.  
-.  
-.  
-
-It's true,  
-Look how they shine for you,  
-Look how they shine for you,  
-Look how they shine for,  
-Look how they shine for you,  
-Look how they shine for you,  
-Look how they shine.
-
-Look at the stars,  
-Look how they shine for you,  
-And all the things that you do.  
+## Installation
+master.key 8ecd7d7caba86c4df00cb686f1091cbe
 
 ## Disclaimer
 Clone at your own risk

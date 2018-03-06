@@ -1,19 +1,17 @@
-$(document).on 'ready turbolinks:load', ->
-  elem = document.querySelector('#slide-out');
-  instance = new M.Sidenav(elem, {}) if elem
-
-$(document).on 'ready turbolinks:before-visit', ->
+$(document).on 'turbolinks:before-visit turbolinks:before-cache', ->
   elem = document.querySelector('#slide-out');
   instance = M.Sidenav.getInstance(elem) if elem
   if instance 
     instance.close() if instance.isOpen #close on click
     instance.destroy()
 
-$(document).on 'ready turbolinks:load', ->
+$(document).on 'turbolinks:load', ->
+  elem = document.querySelector('#slide-out');
+  instance = new M.Sidenav(elem, {}) if elem
+
+$(document).on 'turbolinks:load', ->
   Waves.displayEffect()
   M.updateTextFields()
-
-
 
   $('.dropdown-trigger').dropdown();
   $('.slider').slider();
