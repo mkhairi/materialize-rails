@@ -1,41 +1,22 @@
-br
-br
-div class="row"
-  div id="admin" class="col s12"
-    div class="card material-table"
-      div class="table-header"
-
-        h5 Posts
+.row
+  .col.s12
+    .card.material-table
+      .table-header
+        h5 Listing posts
         .actions data-turbolinks="false"
-          a.search-toggle.waves-effect.btn-flat.nopadding href="#" 
+          a.search-toggle.waves-effect.btn-flat.nopadding href="#"
             i.material-icons search
 
-      table#dttb.table
+      table#dttb.responsive.nowrap.table.table-hover data-sort="true" data-source="#{url_for(format: :json)}"
         thead
           tr
-            th width="30%"Title
-            th Body
-            th width="100px" Published
-            th Created at
-            th Updated at
-            th 
-
-        tbody
-          - @posts.each do |post|
-            tr
-              td = post.title
-              td = post.body
-              td = post.published
-              td = post.created_at
-              td = post.updated_at
-              td.right-align
-                = link_to 'Show ', post
-                = link_to ' Edit ', edit_post_path(post)
-                = link_to ' Destroy', post, data: {:confirm => 'Are you sure?'}, :method => :delete
-
-
-
+            th data-data="title" Title
+            th data-data="body" Body
+            th data-data="published" Published
+            th data-data="created_at" Created at
+            th data-data="updated_at" Updated at
+            th data-data="url" data-orderable="false" data-class-name="all" data-searchable="false" class="skip-export" width="100px"
 
 .fixed-action-btn
-  a#newpost.waves-effect.waves-light.btn.btn-floating.btn-large.cyan href="#{new_post_path}" 
+  a#newpost.waves-effect.waves-light.btn.btn-floating.btn-large.cyan href="#{new_post_path}"
     i.large.material-icons add

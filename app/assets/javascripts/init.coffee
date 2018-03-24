@@ -11,19 +11,23 @@ $(document).on 'turbolinks:load', ->
 
 $(document).on 'turbolinks:load', ->
   Waves.displayEffect()
-  M.updateTextFields()
+ 
+  #reset modal on turbolinks load
+  M.Modal._count = 0;
+  $('.modal').modal();
 
-  $('.dropdown-trigger').dropdown();
   $('.slider').slider();
   $('.parallax').parallax();
   $('.materialboxed').materialbox();
-  $('.modal').modal();
   $('.scrollspy').scrollSpy();
   $('.datepicker').datepicker();
-  $('.tabs').tabs();
   $('.timepicker').timepicker();
   $('.tooltipped').tooltip();
   $('.collapsible').collapsible();
+  $('.dropdown-trigger').dropdown();
+
+  #form
+  M.updateTextFields()
   $('select').not('.disabled').formSelect();
 
   $('input.autocomplete').autocomplete data:
@@ -33,6 +37,7 @@ $(document).on 'turbolinks:load', ->
   $('input[data-length], textarea[data-length]').characterCounter();
 
 
+  $('.tabs').tabs();
   # Swipeable Tabs Demo Init
   if $('#tabs-swipe-demo').length
     $('#tabs-swipe-demo').tabs 'swipeable': true

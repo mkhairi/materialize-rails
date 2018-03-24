@@ -33,9 +33,19 @@ $.extend $.fn.dataTable.defaults,
       first:    "<i class='material-icons'>first_page</i>"
       last:     "<i class='material-icons'>last_page</i>"
 
+$(document).on 'preInit.dt', (e, settings) ->
+  api = new ($.fn.dataTable.Api)(settings)
+  table_id = "#" + api.table().node().id
+  url = $(table_id).data('source')
+  api.ajax.url url
+
+  title = $(table_id).data('title')
+  $(".left-action").prepend(title) if title
+
 dttb = null
 $(document).on 'turbolinks:load', ->
-  dttb = $("table#dttb").DataTable() unless $.fn.DataTable.isDataTable("table#dttb")
+  dttb = $("table[id^=dttb]").DataTable() unless $.fn.DataTable.isDataTable("table[id^=dttb]")
+
   $('.search-toggle').click ->
     if $('.hiddensearch').css('display') == 'none'
       $('.hiddensearch').slideDown()
