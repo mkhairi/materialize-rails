@@ -23,7 +23,7 @@ $(document).on 'turbolinks:load', ->
   $('.tabs').tabs();
   $('.timepicker').timepicker();
   $('.tooltipped').tooltip();
-  $('select').not('.disabled').select();
+  $('select').not('.disabled').formSelect();
 
   $('input.autocomplete').autocomplete data:
     'Apple': null

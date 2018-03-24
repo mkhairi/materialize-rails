@@ -1,14 +1,47 @@
-= render "pages/components/badges"
-br
-= render "pages/components/buttons"
-br
-= render "pages/components/breadcrumbs"
-br
-= render "pages/components/cards"
-br
-= render "pages/components/modal"
-br
-= render "pages/components/tabs"
-br
-br
-br
+.row
+  .col.m3.toc data-turbolinks="false"
+    ul.collection
+      li.collection-item
+        a href="#badges-demo" Badges
+      li.collection-item
+        a href="#buttons-demo" Buttons
+      li.collection-item
+        a href="#breadcrumbs-demo" Breadcrumbs      
+      li.collection-item
+        a href="#cards-demo" Cards
+      li.collection-item
+        a href="#modal-demo" Modal
+      li.collection-item
+        a href="#tabs-demo" Tabs     
+
+  .col.m9
+    .card
+      .card-content
+        span.card-title id="badges-demo" Badges
+        = render "pages/components/badges"
+    br
+    .card
+      .card-content
+        span.card-title id="buttons-demo" Buttons
+        = render "pages/components/buttons"
+    br
+    .card
+      .card-content
+        span.card-title id="breadcrumbs-demo" Breadcrumbs
+        = render "pages/components/breadcrumbs"
+    br
+    .card
+      .card-content
+        span.card-title id="cards-demo" Cards
+        = render "pages/components/cards"
+    br
+    .card
+      .card-content
+        span.card-title id="modal-demo" Modal
+        = render "pages/components/modal"
+    br
+    .card
+      .card-content
+        span.card-title id="tabs-demo" Tabs
+        = render "pages/components/tabs"
+    br
