@@ -1,6 +1,6 @@
 .row
   .col.m3.toc data-turbolinks="false"
-    ul.collection
+    ul.collection.z-depth-1
       li.collection-item
         a href="#autocomplete-demo" Autocomplete
       li.collection-item
@@ -12,7 +12,7 @@
       li.collection-item
         a href="#slider-demo" Slider
       li.collection-item
-        a href="#slider-demo" Radios
+        a href="#radios-demo" Radios
       li.collection-item
         a href="#select-demo" Select  
       li.collection-item
@@ -22,47 +22,47 @@
 
   .col.m9
     br
-    .card
+    .card.section.scrollspy id="autocomplete-demo"
       .card-content
-        span.card-title id="autocomplete-demo" Autocomplete
+        span.card-title Autocomplete
         = render "pages/forms/autocomplete"
     br
-    .card
+    .card.section.scrollspy id="checkboxes-demo"
       .card-content
-        span.card-title id="checkboxes-demo" Checkboxes
+        span.card-title Checkboxes
         = render "pages/forms/checkboxes"
     br
-    .card
+    .card.section.scrollspy id="chips-demo"
       .card-content
-        span.card-title id="chips-demo" Chips
+        span.card-title Chips
         = render "pages/forms/chips"
     br
-    .card
+    .card.section.scrollspy id="picker-demo" 
       .card-content
-        span.card-title id="picker-demo" Picker
+        span.card-title Picker
         = render "pages/forms/picker"
     br
-    .card
+    .card.section.scrollspy id="slider-demo" 
       .card-content
-        span.card-title id="slider-demo" Slider
+        span.card-title Slider
         = render "pages/forms/slider"
     br
-    .card
+    .card.section.scrollspy id="radios-demo"
       .card-content
-        span.card-title id="radios-demo" Radios
+        span.card-title  Radios
         = render "pages/forms/radios"
     br
-    .card
+    .card.section.scrollspy id="select-demo"
       .card-content
-        span.card-title id="select-demo" Select
+        span.card-title Select
         = render "pages/forms/select"
     br
-    .card
+    .card.section.scrollspy id="switches-demo" 
       .card-content
-        span.card-title id="switches-demo" Switches
+        span.card-title Switches
         = render "pages/forms/switches"
     br
-    .card
+    .card.section.scrollspy id="inputs-demo"
       .card-content
-        span.card-title id="inputs-demo" Inputs
+        span.card-title  Inputs
         = render "pages/forms/inputs"

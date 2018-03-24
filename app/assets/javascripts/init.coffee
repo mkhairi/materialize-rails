@@ -23,6 +23,7 @@ $(document).on 'turbolinks:load', ->
   $('.tabs').tabs();
   $('.timepicker').timepicker();
   $('.tooltipped').tooltip();
+  $('.collapsible').collapsible();
   $('select').not('.disabled').formSelect();
 
   $('input.autocomplete').autocomplete data:
@@ -35,7 +36,16 @@ $(document).on 'turbolinks:load', ->
   # Swipeable Tabs Demo Init
   if $('#tabs-swipe-demo').length
     $('#tabs-swipe-demo').tabs 'swipeable': true
+  
   # Chips
+
+  # Handle removal of static chips.
+  $(document.body).on 'click', '.chip .close', ->
+    $chips = $(this).closest('.chips')
+    if $chips.length and $chips[0].M_Chips
+      return
+    $(this).closest('.chip').remove()
+
   $('.chips').chips()
   $('.chips-initial').chips
     readOnly: true
@@ -51,6 +61,7 @@ $(document).on 'turbolinks:load', ->
     'Apple': null
     'Microsoft': null
     'Google': null
+
   # Fab
   $('.fixed-action-btn').floatingActionButton()
   $('.fixed-action-btn.horizontal').floatingActionButton direction: 'left'
@@ -58,6 +69,7 @@ $(document).on 'turbolinks:load', ->
     direction: 'left'
     hoverEnabled: false
   $('.fixed-action-btn.toolbar').floatingActionButton toolbarEnabled: true
+
 
   console.log "load init on ready or turbolinks:load"
 

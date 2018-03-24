@@ -1,6 +1,6 @@
 .row
   .col.m3.toc data-turbolinks="false"
-    ul.collection
+    ul.collection.z-depth-1
       li.collection-item
         a href="#badges-demo" Badges
       li.collection-item
@@ -15,33 +15,33 @@
         a href="#tabs-demo" Tabs     
 
   .col.m9
-    .card
+    .card.section.scrollspy id="badges-demo"
       .card-content
-        span.card-title id="badges-demo" Badges
+        span.card-title Badges
         = render "pages/components/badges"
     br
-    .card
+    .card.section.scrollspy id="buttons-demo"
       .card-content
-        span.card-title id="buttons-demo" Buttons
+        span.card-title Buttons
         = render "pages/components/buttons"
     br
-    .card
+    .card.section.scrollspy id="breadcrumbs-demo"
       .card-content
-        span.card-title id="breadcrumbs-demo" Breadcrumbs
+        span.card-title Breadcrumbs
         = render "pages/components/breadcrumbs"
     br
-    .card
+    .card.section.scrollspy id="cards-demo"
       .card-content
-        span.card-title id="cards-demo" Cards
+        span.card-title Cards
         = render "pages/components/cards"
     br
-    .card
+    .card.section.scrollspy id="modal-demo"
       .card-content
-        span.card-title id="modal-demo" Modal
+        span.card-title Modal
         = render "pages/components/modal"
     br
-    .card
+    .card.section.scrollspy id="tabs-demo"
       .card-content
-        span.card-title id="tabs-demo" Tabs
+        span.card-title Tabs
         = render "pages/components/tabs"
     br
