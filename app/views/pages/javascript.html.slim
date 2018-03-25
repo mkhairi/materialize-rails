@@ -1,0 +1,32 @@
+.row
+  .col.m3.toc data-turbolinks="false"
+    ul.collection.z-depth-1
+      li.collection-item
+        a href="#carousel-demo" Carousel
+      li.collection-item
+        a href="#collapsible-demo" Collapsible
+      li.collection-item
+        a href="#dropdown-demo" Dropdown 
+      li.collection-item
+        a href="#modal-demo" Modal  
+
+  .col.m9
+    .card.section.scrollspy id="carousel-demo"
+      .card-content
+        span.card-title Carousel
+        = render "pages/javascript/carousel"
+    br
+    .card.section.scrollspy id="collapsible-demo"
+      .card-content
+        span.card-title Collapsible
+        = render "pages/javascript/collapsible"
+    br
+    .card.section.scrollspy id="dropdown-demo"
+      .card-content
+        span.card-title Dropdown
+        = render "pages/javascript/dropdown"
+    br
+    .card.section.scrollspy id="modal-demo"
+      .card-content
+        span.card-title Modal
+        = render "pages/javascript/modal"

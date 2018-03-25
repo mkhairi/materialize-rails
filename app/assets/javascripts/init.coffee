@@ -15,6 +15,10 @@ $(document).on 'turbolinks:load', ->
   #reset modal on turbolinks load
   M.Modal._count = 0;
   $('.modal').modal();
+  $('.carousel').carousel();
+  $('.collapsible').not('.expandable').collapsible();
+
+  $('.collapsible.expandable').collapsible({accordion: false});
 
   $('.slider').slider();
   $('.parallax').parallax();
@@ -23,7 +27,6 @@ $(document).on 'turbolinks:load', ->
   $('.datepicker').datepicker();
   $('.timepicker').timepicker();
   $('.tooltipped').tooltip();
-  $('.collapsible').collapsible();
   $('.dropdown-trigger').dropdown();
 
   #form
