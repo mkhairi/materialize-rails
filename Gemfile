@@ -99,3 +99,6 @@ gem 'inline_svg'
 
 # wsl ftw
 gem 'wdm', '>= 0.1.0' if Gem.win_platform?
+
+# misc
+gem 'htmlentities'

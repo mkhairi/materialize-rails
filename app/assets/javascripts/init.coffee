@@ -12,17 +12,20 @@ $(document).on 'turbolinks:load', ->
 $(document).on 'turbolinks:load', ->
   Waves.displayEffect()
  
-  #reset modal on turbolinks load
+  # Reset
   M.Modal._count = 0;
+  M.ScrollSpy._count = 0;
+
   $('.modal').modal();
   $('.carousel').carousel();
   $('.collapsible').not('.expandable').collapsible();
-
   $('.collapsible.expandable').collapsible({accordion: false});
+  $('.tap-target').tapTarget();
 
   $('.slider').slider();
   $('.parallax').parallax();
   $('.materialboxed').materialbox();
+
   $('.scrollspy').scrollSpy();
   $('.datepicker').datepicker();
   $('.timepicker').timepicker();

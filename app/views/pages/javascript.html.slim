@@ -8,6 +8,8 @@
       li.collection-item
         a href="#dropdown-demo" Dropdown 
       li.collection-item
+        a href="#feature-demo" Feature Discovery 
+      li.collection-item
         a href="#modal-demo" Modal  
 
   .col.m9
@@ -15,6 +17,7 @@
       .card-content
         span.card-title Carousel
         = render "pages/javascript/carousel"
+        /pre = render_source "pages/javascript/carousel"
     br
     .card.section.scrollspy id="collapsible-demo"
       .card-content
@@ -25,6 +28,11 @@
       .card-content
         span.card-title Dropdown
         = render "pages/javascript/dropdown"
+    br
+    .card.section.scrollspy id="feature-demo"
+      .card-content
+        span.card-title Feature Discovery 
+        = render "pages/javascript/feature_discovery"
     br
     .card.section.scrollspy id="modal-demo"
       .card-content
