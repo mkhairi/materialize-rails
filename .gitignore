@@ -34,3 +34,7 @@
 db/*.sqlite3
 
 .env
+/public/packs
+/public/packs-test
+yarn-debug.log*
+.yarn-integrity
