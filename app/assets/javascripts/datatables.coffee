@@ -54,7 +54,7 @@ $(document).on 'turbolinks:load', ->
 
 $(document).on 'turbolinks:before-cache', ->
   if dttb
-    dataTable.clear()
+    dttb.clear()
     dttb.destroy() 
     dttb = null
 
