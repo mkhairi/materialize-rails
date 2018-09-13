@@ -14,7 +14,7 @@
 //= require rails-ujs
 //= require activestorage
 //= require materialize/extras/nouislider
-//= require materialize
+//= require materialize-sprockets
 //= require datatables
 //= require turbolinks
 //= require init
