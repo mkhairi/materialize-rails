@@ -91,7 +91,7 @@ gem 'responders'
 gem 'decent_exposure'
 
 # assets
-gem 'materialize-sass', '~> 1.0.0.rc2'
+gem 'materialize-sass'
 gem 'jquery-datatables'
 
 # helpers
