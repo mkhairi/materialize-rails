@@ -1,5 +1,11 @@
-h3 New post
-
-== render 'form'
-
-= link_to 'Back', posts_path
+.row
+  .col.s12.m8
+    h2.header New Post
+    .card.horizontal
+      .card-image
+        img src="https://lorempixel.com/100/550/nature/6" /
+      .card-stacked
+        .card-content
+          == render 'form'
+        .card-action
+          = link_to 'Back', posts_path

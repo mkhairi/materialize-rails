@@ -145,7 +145,7 @@ div.material-table .table-title {
 }
 
 div.material-table table tr td {
-  padding: 0 0 0 56px;
+  padding: 1rem;
   height: 48px;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.87);
@@ -176,7 +176,7 @@ div.material-table table th {
   white-space: nowrap;
   padding: 0;
   height: 56px;
-  padding-left: 56px;
+  padding: 1rem;
   vertical-align: middle;
   outline: none !important;
 }
@@ -198,7 +198,7 @@ div.material-table table th.sorting_desc:after {
   text-transform: none;
   display: inline-block;
   word-wrap: normal;
-  content: "arrow_back";
+  content: "arrow_upward";
   display: none;
   vertical-align: middle;
 }
@@ -210,7 +210,7 @@ div.material-table table th.sorting_desc:after {
 }
 
 div.material-table table th.sorting_desc:after {
-  content: "arrow_forward";
+  content: "arrow_downward";
 }
 
 div.material-table table tbody tr:hover {
