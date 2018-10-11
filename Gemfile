@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use ActiveStorage variant
-gem 'mini_magick', '~> 4.8'
+gem 'image_processing'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -93,6 +93,7 @@ gem 'decent_exposure'
 # assets
 gem 'materialize-sass'
 gem 'jquery-datatables'
+gem 'undraw', github: 'mkhairi/undraw'
 
 # helpers
 gem 'inline_svg'

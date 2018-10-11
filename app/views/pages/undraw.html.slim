@@ -1,0 +1,42 @@
+- col = ["running_wild", "invite", "mindfulness", "weather", "home_run", "search", "javascript_frameworks", "notes", "romantic_getaway", "hiring", "resume", "beer_celebration", "girls_just_wanna_have_fun", "queue", "outer_space", 
+        "designer_life", "playful_cat", "follow_me_drone", "connecting_teams", "live_collaboration", "create", "wall_post", "book_lover", "fast_loading", "savings", "target", "to_the_stars", "love_is_in_the_air", "cloud_sync", "blogging", 
+        "movie_night", "charts", "fishing", "organize_photos", "confirmation", "content", "children", "experts", "heartbroken", "account", "events", "freelancer", "bitcoin_p2p", "android", "ethereum", "businesswoman", "questions", "bibliophile", 
+        "vault", "doctor", "lost", "safe", "alert", "mailbox", "music", "social_networking", "motherhood", "destination", "mail_sent", "building_blocks", "winter_olympics", "search_engines", "co-working", "pilates", "appreciation", "starman", 
+        "credit_card_payments", "wireframing", "camping", "photocopy", "gaming", "presentation", "staying_in", "surfer", "credit_card", "file_searching", "pen_tool", "brainstorming", "fans", "opened", "about_us_page", "to_do_list", "community", 
+        "team_spirit", "design_tools", "static_assets", "sleep_analysis", "credit_card_payment", "chef", "design_community", "devices", "in_the_pool", "contrast", "passing_by", "air_support", "new_message", "delivery", "designer_girl", "social_ideas", 
+        "empty", "lighthouse", "address", "online_world", "street_food", "walk_in_the_city", "influencer", "meditation", "healthy_habit", "videographer", "post", "typing", "old_day", "swipe_profiles", "working_late", "house_searching", "web_devices", 
+        "grades", "gardening", "relaxing_at_home", "at_work", "country_side", "collecting", "working", "sunny_day", "marilyn", "connected", "tweetstorm", "golden_gate_bridge", "image_folder", "art_lover", "refreshing", "design_process", "product_hunt", 
+        "job_hunt", "vr_chat", "campfire", "newsletter", "startled", "internet_on_the_go", "high_five", "city_driver", "envelope", "houses", "pie_chart", "social_growth", "easter_egg_hunt", "mail", "morning_essentials", "add_user", "messaging", "map_light", 
+        "business_plan", "forgot_password", "image_upload", "server", "fall_is_coming", "businessman", "inbox_cleanup", "electric_car", "instant_support", "map_dark", "blank_canvas", "growing", "login", "features_overview", "before_dawn", "bitcoin", "goal", 
+        "make_it_rain", "specs", "taken", "choose", "drone_delivery", "dashboard", "designer", "press_play", "photo_sharing", "podcast", "science", "segment", "astronaut", "meeting", "tabs", "mobile_apps", "rising", "window_shopping", "accept_terms", "feeling_blue", 
+        "powerful", "focus", "co-workers", "missed_chances", "startup_life", "moment_to_remember", "young_and_happy", "work_chat", "team", "news", "social_tree", "world", "by_my_car", "maintenance", "website_setup", "through_the_desert", "finance", "creation_process", 
+        "organizing_projects", "processing", "social_media", "site_stats", "makeup_artist", "welcome", "in_the_office", "forever", "coding", "relaxation", "smiley_face", "product_tour", "pedestrian_crossing", "in_love", "workout", "images", "organize_resume", "navigation", 
+        "qa_engineers", "security_on", "group_selfie", "digital_nomad", "fatherhood", "loading", "broadcast", "mobile_payments", "posts", "messages", "selfie", "report", "chat", "plain_credit_card", "friendship", "super_thank_you", "wishes", "crypto_flowers", "mission_impossible", 
+        "photos", "preferences", "personalization", "baby", "good_doggy", "server_status", "balloons", "word_of_mouth", "voice_control", "no_data", "browser_stats", "collaboration", "blog_post", "programming", "ride_a_bicycle", "successful_purchase", "security", "modern_woman", 
+        "data_trends", "emails", "time_management", "ordinary_day", "drone_race", "departing", "artificial_intelligence", "autumn", "yacht", "firmware", "thoughts", "eating_together", "grand_slam", "filing_system", "a_day_at_the_park", "responsive", "checklist", "ether", 
+        "studying", "depi", "chatting", "data_report", "tasting", "alien_science", "online", "windows", "couple", "spreadsheets", "add_to_cart", "collection", "jogging", "may_the_force", "be_the_hero", "off_road", "gdpr", "work_time", "taking_notes", "creativity", "woman", 
+        "agreement", "snowman", "analysis", "select", "chilling", "setup", "analytics", "graduation", "superhero", "development", "basketball", "cautious_dog", "sync", "interaction_design", "online_shopping", 
+        "mobile", "mobile_browsers", "add_files", "secure_data", "gift", "setup_wizard", "reading_list", "conversation", "together", "secure_server", "control_panel", "hang_out", "filter", "setup_analytics", "hello", "calendar", 
+        "birthday_cake", "people_search", "data", "trip", "upvote", "container_ship", "nerd", "back_in_the_day", "on_the_way", "on_the_office", "selfie_time", "business_deal", "dark_alley", "portfolio", "happy_birthday", "confirmed", "onboarding", "upload", "messenger", 
+        "profile_pic", "women_day", "order_confirmed", "floating", "airport", "transfer_files", "resume_folder", "social_strategy", "back_to_school", "app_installation", "cloud_hosting", "interview", "in_sync", "active_support", "doctors", "calculator", "statistics", "email_capture", "beach", "track_and_field", "virtual_reality", 
+        "segmentation", "real-time_sync", "building", "celebration", "bus_stop", "documents", "photo", "for_sale", "more_music", "exploring", "customer_survey", "notebook", "getting_coffee", "product_teardown"]
+
+h3 Random unDraw.io
+.row
+  - col.shuffle.sample(50).each do |c|
+    .col
+      - color = "##{Random.new.bytes(3).unpack("H*")[0]}"
+      .card
+        .card-image.waves-effect.waves-block.waves-light
+          br
+          = undraw(c, color: color, class: 'undraw-features', size: "350*150")
+        .card-content
+          span.card-title.activator.grey-text.text-darken-4
+            = c
+            i.material-icons.right more_vert
+        .card-reveal
+          span.card-title.grey-text.text-darken-4
+            | Card Title
+            i.material-icons.right close
+          p Here is some more information about this product that is only revealed once clicked on.
+  
