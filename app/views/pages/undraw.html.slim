@@ -21,7 +21,7 @@
         "profile_pic", "women_day", "order_confirmed", "floating", "airport", "transfer_files", "resume_folder", "social_strategy", "back_to_school", "app_installation", "cloud_hosting", "interview", "in_sync", "active_support", "doctors", "calculator", "statistics", "email_capture", "beach", "track_and_field", "virtual_reality", 
         "segmentation", "real-time_sync", "building", "celebration", "bus_stop", "documents", "photo", "for_sale", "more_music", "exploring", "customer_survey", "notebook", "getting_coffee", "product_teardown"]
 
-h3 Random unDraw.io
+h3 Random unDraw.co with random color
 .row
   - col.shuffle.sample(50).each do |c|
     .col.m4.s12
@@ -29,7 +29,7 @@ h3 Random unDraw.io
       .card
         .card-image.waves-effect.waves-block.waves-light
           br
-          = undraw(c, color: {primary: color}, class: 'undraw-features', size: "350*150")
+          = undraw(c, color: {primary: color}, class: 'undraw-#{c}', size: "350*150")
         .card-content
           span.card-title.activator.grey-text.text-darken-4
             = c
