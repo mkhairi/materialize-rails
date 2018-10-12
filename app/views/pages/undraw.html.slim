@@ -24,12 +24,12 @@
 h3 Random unDraw.io
 .row
   - col.shuffle.sample(50).each do |c|
-    .col
+    .col.m4.s12
       - color = "##{Random.new.bytes(3).unpack("H*")[0]}"
       .card
         .card-image.waves-effect.waves-block.waves-light
           br
-          = undraw(c, color: color, class: 'undraw-features', size: "350*150")
+          = undraw(c, color: {primary: color}, class: 'undraw-features', size: "350*150")
         .card-content
           span.card-title.activator.grey-text.text-darken-4
             = c

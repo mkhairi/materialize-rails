@@ -93,7 +93,7 @@ gem 'decent_exposure'
 # assets
 gem 'materialize-sass'
 gem 'jquery-datatables'
-gem 'undraw', github: 'mkhairi/undraw'
+gem 'undraw'
 
 # helpers
 gem 'inline_svg'

@@ -16,7 +16,8 @@
 
 .section
   /! Icon Section
-  = undraw("features_overview", color: "#ff6347", class: 'undraw-features', id: "undraw-features")
+  - color = "##{Random.new.bytes(3).unpack("H*")[0]}"
+  = undraw("features_overview", color: color, class: 'undraw-features', id: "undraw-features")
   .row
     .col.s12.m4
       .icon-block
