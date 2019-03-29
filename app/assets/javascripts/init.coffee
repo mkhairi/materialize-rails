@@ -5,6 +5,9 @@ $(document).on 'turbolinks:before-visit turbolinks:before-cache', ->
     instance.close() if instance.isOpen #close on click
     instance.destroy()
 
+$(document).on 'turbolinks:before-visit turbolinks:before-cache', ->
+  $('.toast').remove()
+
 $(document).on 'turbolinks:load', ->
   elem = document.querySelector('#slide-out');
   instance = new M.Sidenav(elem, {}) if elem
