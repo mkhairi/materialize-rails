@@ -1,10 +1,34 @@
-## Installation
-master.key 8ecd7d7caba86c4df00cb686f1091cbe
+# README
 
-## Disclaimer
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+  config/master.key 
+  ```881f1a16e916745d1709d724c7600b96```
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* Disclaimer
 Clone at your own risk
 
-## Contributing
+* Contributing
 ⭐️ this repository if you found it useful ❤️
 
 Any Pull requests are welcome to improve this example repo
+
+* ...

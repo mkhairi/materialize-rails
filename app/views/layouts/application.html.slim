@@ -8,9 +8,11 @@ html
     //meta name="turbolinks-cache-control" content="no-cache"
     meta name="turbolinks-cache-control" content="no-preview"
     = csrf_meta_tags
-    = favicon_link_tag       'favicon.png'
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
-    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = favicon_link_tag     'favicon.png'
+    = stylesheet_link_tag  'application', 'data-turbolinks-track': 'reload', media: 'all'
+    = stylesheet_pack_tag  'application', 'data-turbolinks-track': 'reload', media: 'all'
+    = javascript_pack_tag  'application', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag  'application', 'data-turbolinks-track': 'reload'
     = toast
     - swatch = %w(lighten darken accent).sample
   body

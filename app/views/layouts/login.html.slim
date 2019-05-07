@@ -6,9 +6,10 @@ html
     meta content="/" name="turbolinks-root" 
     meta name="turbolinks-cache-control" content="no-preview"
     title Materialize
-    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': true
     link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
-    = javascript_include_tag 'application', 'data-turbolinks-track': true
+    = stylesheet_link_tag    'application', 'data-turbolinks-track': "reload",  media: 'all'
+    = javascript_pack_tag    'application', 'data-turbolinks-track': "reload"
+    = javascript_include_tag    'application', 'data-turbolinks-track': "reload"
     = csrf_meta_tags
     - @color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
     
