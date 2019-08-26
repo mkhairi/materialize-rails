@@ -38,20 +38,20 @@ html
 
             - if user_signed_in?
               li
-                a.dropdown-button data-target="dropdown1" href="#!" 
+                a.dropdown-trigger data-target="dropdown-main" href="#!" 
                   span = current_user.email
                   i.material-icons.right arrow_drop_down
+                  - if user_signed_in?
+                ul#dropdown-main.dropdown-content
+                  li = link_to (t :profile), edit_user_registration_url
+                  li.divider
+                  li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
+              
             - else
               li = link_to (t :sign_in), new_user_session_url
 
 
-          - if user_signed_in?
-            ul#dropdown1.dropdown-content
-              li = link_to (t :profile), edit_user_registration_url
-              li.divider
-              li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
-
-          
+        
     aside
      = render "layouts/sidebar"
 
