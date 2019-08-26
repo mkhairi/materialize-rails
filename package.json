@@ -3,10 +3,12 @@
   "private": true,
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
+    "@rails/actiontext": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0-alpha",
-    "@rails/webpacker": "^4.0.2",
+    "@rails/ujs": "^6.0.0",
+    "@rails/webpacker": "^4.0.7",
     "jquery": "^3.4.1",
+    "trix": "^1.0.0",
     "turbolinks": "^5.2.0",
     "vue": "^2.6.10",
     "vue-loader": "^15.7.0",
@@ -14,6 +16,6 @@
   },
   "version": "0.1.0",
   "devDependencies": {
-    "webpack-dev-server": "^3.3.1"
+    "webpack-dev-server": "^3.7.2"
   }
 }
