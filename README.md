@@ -23,10 +23,10 @@ Things you may want to cover:
 
 * Deployment instructions
 
-* Disclaimer
+# Disclaimer
 Clone at your own risk
 
-* Contributing
+# Contributing
 ⭐️ this repository if you found it useful ❤️
 
 Any Pull requests are welcome to improve this example repo
