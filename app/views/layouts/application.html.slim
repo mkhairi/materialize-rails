@@ -41,7 +41,6 @@ html
                 a.dropdown-trigger data-target="dropdown-main" href="#!" 
                   span = current_user.email
                   i.material-icons.right arrow_drop_down
-                  - if user_signed_in?
                 ul#dropdown-main.dropdown-content
                   li = link_to (t :profile), edit_user_registration_url
                   li.divider
