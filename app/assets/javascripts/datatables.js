@@ -52,7 +52,7 @@ $(document).on('preInit.dt', function (e, settings) {
 
 dttb = null;
 
-$(document).on('turbolinks:load', function () {
+$(document).on('turbo:load', function () {
   if (!$.fn.DataTable.isDataTable("table[id^=dttb]")) {
     dttb = $("table[id^=dttb]").DataTable();
   }
@@ -65,7 +65,7 @@ $(document).on('turbolinks:load', function () {
   });
 });
 
-$(document).on('turbolinks:before-cache', function () {
+$(document).on('turbo:before-cache', function () {
   if (dttb) {
     dttb.clear();
     dttb.destroy();
