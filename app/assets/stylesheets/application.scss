@@ -1,13 +1,9 @@
-@import "https://fonts.googleapis.com/icon?family=Material+Icons";
-
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
 @import "materialize/components/color-variables";
 $primary-color: color("blue", "lighten-2") !default;
 $secondary-color: color("yellow", "base") !default;
 @import 'materialize';
-
-@import "materialize/extras/nouislider";
+@import 'materialize/extras/nouislider';
 @import "datatables";
 @import "devise";
 @import "custom";
-
-

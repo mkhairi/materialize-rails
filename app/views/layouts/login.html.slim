@@ -3,16 +3,12 @@ html
   head
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
     meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" name="viewport" /
-    meta content="/" name="turbolinks-root" 
-    meta name="turbolinks-cache-control" content="no-preview"
     title Materialize
-    link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"
-    = stylesheet_link_tag    'application', 'data-turbolinks-track': "reload",  media: 'all'
-    = javascript_pack_tag    'application', 'data-turbolinks-track': "reload"
-    = javascript_include_tag    'application', 'data-turbolinks-track': "reload"
+    = stylesheet_link_tag 'application', 'data-turbo-track': "reload",  media: 'all'
+    = javascript_include_tag 'application', 'data-turbo-track': "reload"
     = csrf_meta_tags
     - @color = %w(pink red purple deep-purple indigo blue light-blue cyan teal green light-green lime yellow amber orange deep-orange brown grey).sample
-    
+
     css:
       .brand-logo {
         display: flex;

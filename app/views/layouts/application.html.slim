@@ -4,59 +4,46 @@ html
     title Materialize
     meta content="text/html; charset=UTF-8" http-equiv="Content-Type" /
     meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport" /
-    meta content="/" name="turbolinks-root" 
-    //meta name="turbolinks-cache-control" content="no-cache"
-    meta name="turbolinks-cache-control" content="no-preview"
     = csrf_meta_tags
-    = favicon_link_tag     'favicon.png'
-    = stylesheet_link_tag  'application', 'data-turbolinks-track': 'reload', media: 'all'
-    = stylesheet_pack_tag  'application', 'data-turbolinks-track': 'reload', media: 'all'
-    = javascript_pack_tag  'application', 'data-turbolinks-track': 'reload'
-    = javascript_include_tag  'application', 'data-turbolinks-track': 'reload'
+    = favicon_link_tag 'favicon.png'
+    = turbo_include_tags
+    = stylesheet_link_tag 'application', 'data-turbo-track': 'reload', media: 'all'
+    = javascript_include_tag 'application', 'data-turbo-track': 'reload'
     = toast
     - swatch = %w(lighten darken accent).sample
   body
-    header.navbar-fixed 
+    header.navbar-fixed
       nav class="#{@color} darken-1"
        .nav-wrapper.container
-          a#sidenav href="#" data-target="slide-out" class="button-collapse sidenav-trigger show-on-large" data-turbolinks="false"
+          a#sidenav href="#" data-target="slide-out" class="button-collapse sidenav-trigger show-on-large" data-turbo="false"
             i class="material-icons right" apps
-          
-          a#logo-container.brand-logo href="/"  
+          a#logo-container.brand-logo href="/"
             = inline_svg "logo.svg", class: "main-logo"
-
           ul#nav-mobile.right
             li: a href="/" Home
             li
-              a href="/posts" 
+              a href="/posts"
                 span Posts
                 span.new.badge 4
             li: a href="/components"  Components
             li: a href="/javascript"  Javascript
             li: a href="/forms"  Forms
             /! Dropdown Trigger
-
             - if user_signed_in?
               li
-                a.dropdown-trigger data-target="dropdown-main" href="#!" 
+                a.dropdown-trigger data-target="dropdown-main" href="#!"
                   span = current_user.email
                   i.material-icons.right arrow_drop_down
                 ul#dropdown-main.dropdown-content
                   li = link_to (t :profile), edit_user_registration_url
                   li.divider
                   li = link_to (t :sign_out), destroy_user_session_url, data: {method: :delete}
-              
             - else
               li = link_to (t :sign_in), new_user_session_url
-
-
-        
     aside
      = render "layouts/sidebar"
-
     main
       = yield(:jumbotron) if content_for?(:jumbotron)
-      
       - if devise_controller?
         section#login
           .container-fluid.pt-3
@@ -66,8 +53,5 @@ html
       - else
         .container
             == yield
-
-
-
     footer.page-footer class="#{@color}"
       = render "layouts/footer"

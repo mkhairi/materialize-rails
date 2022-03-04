@@ -1,4 +1,4 @@
-ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
+ActionView::Base.field_error_proc = proc do |html_tag, _instance|
   class_attr_index = html_tag.index('class="')
   first_tag_end_index = html_tag.index('>')
 
@@ -7,5 +7,4 @@ ActionView::Base.field_error_proc = Proc.new do |html_tag, instance|
   else
     html_tag.insert(class_attr_index + 7, 'error ')
   end
-
 end
