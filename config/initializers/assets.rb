@@ -17,3 +17,7 @@ Rails.application.config.assets.configure do |env|
   env.js_compressor  = :uglifier # or :closure, :yui
   env.css_compressor = :sass
 end
+
+Rails.application.configure do
+  config.importmap.cache_sweepers << Rails.root.join('app/assets/javascripts')
+end

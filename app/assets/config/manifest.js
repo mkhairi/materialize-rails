@@ -1,3 +1,5 @@
 //= link_tree ../images
 //= link application.css
-//= link application.js
+//= link materialize.js
+//= link_tree ../javascripts .js
+//= link_tree ../../../vendor/javascript .js

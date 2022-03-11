@@ -1,7 +1,7 @@
-// This is a manifest file that'll be compiled into application.js, which will include all the files
-// listed below.
-//= require jquery
-//= require materialize/extras/nouislider
-//= require materialize-sprockets
-//= require datatables
-//= require init
+// Configure your import map in config/importmap.rb. Read more: https://github.com/rails/importmap-rails
+import "jquery";
+import "controllers";
+import "@hotwired/turbo-rails";
+import "materializecss";
+import "datatables";
+import "initializer";

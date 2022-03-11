@@ -6,9 +6,8 @@ html
     meta content="width=device-width, initial-scale=1, maximum-scale=1.0" name="viewport" /
     = csrf_meta_tags
     = favicon_link_tag 'favicon.png'
-    = turbo_include_tags
     = stylesheet_link_tag 'application', 'data-turbo-track': 'reload', media: 'all'
-    = javascript_include_tag 'application', 'data-turbo-track': 'reload'
+    = javascript_importmap_tags
     = toast
     - swatch = %w(lighten darken accent).sample
   body

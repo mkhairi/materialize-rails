@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby "3.1.1"
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.2", ">= 7.0.2.2"
+gem "rails", "~> 7.0.2", ">= 7.0.2.3"
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem "sprockets-rails"
@@ -70,10 +70,9 @@ group :production do
 end
 
 # rails stuff
+gem "importmap-rails"
 gem 'turbo-rails'
 gem 'stimulus-rails'
-gem 'babel-transpiler'
-
 # templating engine
 gem 'slim-rails'
 
@@ -87,7 +86,6 @@ gem 'simple_form'
 gem 'responders'
 
 # assets
-gem 'jquery-rails'
 gem 'materialize-sass'
 gem 'jquery-datatables'
 gem 'undraw'
