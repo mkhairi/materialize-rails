@@ -5,3 +5,4 @@
 //= require materialize-sprockets
 //= require datatables
 //= require init
+//= require activestorage
